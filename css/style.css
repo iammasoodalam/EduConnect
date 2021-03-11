@@ -1,0 +1,655 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;1,300&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f2f2f2;
+  font-family: poppins;
+}
+
+.navbar {
+  background-color: #fff;
+  -webkit-box-shadow: 0em 0.125em 0.5em 0em #555555;
+          box-shadow: 0em 0.125em 0.5em 0em #555555;
+}
+
+nav {
+  display: none;
+  position: fixed;
+  top: 4rem;
+  background-color: #207398;
+  color: #fff;
+  right: 1.25em;
+  left: 1.25em;
+  text-align: center;
+  border-radius: 0.250em;
+  z-index: 999;
+}
+
+nav .primary-nav li:last-child {
+  padding-bottom: 0.5rem;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav ul li {
+  padding-top: 0.5em;
+  cursor: pointer;
+}
+
+nav .login-cta {
+  padding: 0.5em;
+  cursor: pointer;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+nav .login-cta .open {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+nav .login-option {
+  display: none;
+  background-color: #126590;
+  border-radius: 0 0 .25em .25em;
+}
+
+nav .login-option li:last-child {
+  padding-bottom: 0.5em;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0.5em 1.25rem;
+}
+
+.container a {
+  font-weight: bolder;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+.container a span {
+  color: #6EC72D;
+}
+
+.container .hamburger {
+  cursor: pointer;
+}
+
+.container .hamburger span {
+  margin: 0 0;
+  display: block;
+  height: 0.150em;
+  width: 1.5em;
+  background-color: black;
+  -webkit-transform-origin: 5px 2px;
+          transform-origin: 5px 2px;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.container .hamburger span:not(:last-child) {
+  margin-bottom: 0.15rem;
+}
+
+.container .nav-open span:first-child {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.container .nav-open span:last-child {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.container .nav-open span:nth-child(2) {
+  opacity: 0;
+}
+
+.homepage {
+  padding-top: 1rem;
+}
+
+.homepage .circle {
+  -webkit-box-shadow: 0px 0px 0.5rem 0rem #555555;
+          box-shadow: 0px 0px 0.5rem 0rem #555555;
+  margin: 0.5rem auto;
+  width: 80vw;
+  height: 80vw;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.homepage .timetable {
+  margin-top: 1rem;
+  position: relative;
+}
+
+.homepage .timetable h2 {
+  text-align: center;
+}
+
+.homepage .timetable .period {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 90%;
+  margin: 0.125rem auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #555555;
+  border-radius: 0.5rem;
+  background-color: rgba(85, 85, 85, 0.5);
+}
+
+.homepage .timetable .period .duration {
+  text-align: center;
+  width: 20%;
+  padding: 1rem;
+  background-color: #555555;
+  border-radius: 0.5rem 0 0 0.5rem;
+  color: #fff;
+}
+
+.homepage .timetable .period .subject-class {
+  padding-left: 1rem;
+  width: 80%;
+}
+
+.homepage .assignment {
+  margin: 1rem auto 0 auto;
+  width: 90%;
+}
+
+.homepage .assignment h2 {
+  text-align: center;
+}
+
+.homepage .assignment .topbar {
+  background-color: rgba(85, 85, 85, 0.5);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem 0.5rem 0 0;
+  font-weight: bold;
+  color: #8D3DAF;
+}
+
+.homepage .assignment .topbar span {
+  float: right;
+}
+
+.homepage .assignment .details {
+  margin-top: 0.125rem;
+  background-color: rgba(85, 85, 85, 0.5);
+  padding: 0.5rem 1rem;
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.homepage .assignment .details .fileupload, .homepage .assignment .details .add-file {
+  margin: 0.125rem 0;
+  padding: 0.250rem 0.5rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+}
+
+.homepage .assignment .details .fileupload span, .homepage .assignment .details .add-file span {
+  cursor: pointer;
+  float: right;
+  background-color: grey;
+  color: #fff;
+  border-radius: 0.125rem;
+  width: 3rem;
+  text-align: center;
+}
+
+.homepage .assignment .details .add-file {
+  cursor: pointer;
+  font-size: 1.2rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+.homepage .assignment .details button {
+  cursor: pointer;
+  font-family: poppins;
+  margin: 0.125rem 0;
+  padding: 0.5rem 0.5rem;
+  background-color: #fff;
+  border: 1px solid #fff;
+  border-radius: 0.5rem;
+  width: 100%;
+  background-color: #6EC72D;
+}
+
+.homepage .lecture-notes {
+  margin: 1rem auto 0 auto;
+  width: 90%;
+}
+
+.homepage .lecture-notes h2 {
+  text-align: center;
+}
+
+.homepage .lecture-notes .topbar {
+  background-color: rgba(85, 85, 85, 0.5);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem 0.5rem 0 0;
+  font-weight: bold;
+  color: #8D3DAF;
+}
+
+.homepage .lecture-notes .topbar span {
+  float: right;
+}
+
+.homepage .lecture-notes .details {
+  margin-top: 0.125rem;
+  background-color: rgba(85, 85, 85, 0.5);
+  padding: 0.5rem 1rem;
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.homepage .lecture-notes .details .attachement {
+  margin: 0.125rem 0;
+  padding: 0.250rem 0.5rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+}
+
+.homepage .lecture-notes .details .attachement span {
+  cursor: pointer;
+  float: right;
+  background-color: grey;
+  color: #fff;
+  border-radius: 0.125rem;
+  width: 3rem;
+  text-align: center;
+}
+
+.homepage .search-student {
+  margin: 1rem auto 0 auto;
+  width: 90%;
+}
+
+.homepage .search-student h2 {
+  text-align: center;
+}
+
+.homepage .search-student form {
+  background-color: rgba(85, 85, 85, 0.5);
+  padding: 1rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.homepage .search-student form input {
+  width: 100%;
+  margin: 0.125rem 0;
+  padding: 0.5rem 0.5rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  border: none;
+  line-height: 1.2rem;
+  font-family: poppins;
+}
+
+.homepage .search-student form input[type='submit'] {
+  cursor: pointer;
+  background-color: #6EC72D;
+  border: 1px solid #fff;
+}
+
+.uploader {
+  margin: 1rem;
+}
+
+.uploader .form-instruction {
+  position: relative;
+  padding: 0 1rem;
+}
+
+.uploader .form-instruction .result-input {
+  position: absolute;
+  background-color: #555555;
+  color: #fff;
+  width: calc(100% - 2rem);
+  border-radius: 0.250rem;
+}
+
+.uploader .form-instruction .result-input #close {
+  cursor: pointer;
+  font-size: 1.2rem;
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+  background-color: #df2525;
+  padding: 0.5rem;
+  line-height: 0.5;
+  border-radius: 0.25rem;
+}
+
+.uploader .form-instruction .result-input table {
+  width: 100%;
+  padding: 0.5rem;
+}
+
+.uploader .form-instruction .result-input th, .uploader .form-instruction .result-input td {
+  text-align: left;
+  padding: 0.25rem;
+}
+
+.uploader .form-instruction .result-input th {
+  color: #6EC72D;
+}
+
+.uploader .form-instruction .result-input td:first-child {
+  font-weight: 300;
+  color: #b8b8ff;
+}
+
+.uploader .form-instruction h2 {
+  text-align: center;
+}
+
+.uploader .form-instruction ul {
+  list-style-type: none;
+  text-align: justify;
+}
+
+.uploader .form-instruction ul li {
+  padding: 0.5rem 0;
+}
+
+.uploader .form-instruction ul li strong {
+  color: #207398;
+}
+
+.uploader .form {
+  padding: 0 1rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.uploader .form h2 {
+  text-align: center;
+}
+
+.uploader .form label, .uploader .form input, .uploader .form select, .uploader .form textarea {
+  width: 100%;
+  padding: 0.25rem;
+  font-family: poppins;
+  border-radius: 0.250rem;
+  outline: none;
+}
+
+.uploader .form input, .uploader .form select, .uploader .form textarea {
+  border: 1px solid #555555;
+  margin-bottom: 0.5rem;
+}
+
+.uploader .form input:focus, .uploader .form select:focus, .uploader .form textarea:focus {
+  -webkit-box-shadow: 0px 0px 5px 0px #555555;
+          box-shadow: 0px 0px 5px 0px #555555;
+}
+
+.uploader .form textarea {
+  resize: none;
+}
+
+.uploader .form input[type="submit"] {
+  background-color: #6EC72D;
+  color: #fff;
+  border: 1px solid #555555;
+  cursor: pointer;
+}
+
+#schedule {
+  margin: 1rem;
+}
+
+#schedule-heading {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #555555;
+}
+
+#schedule select {
+  width: 100%;
+}
+
+#schedule .form {
+  padding: 0 1rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#schedule .form h2 {
+  text-align: center;
+}
+
+#schedule .form label, #schedule .form input, #schedule .form select, #schedule .form textarea {
+  width: 100%;
+  padding: 0.25rem;
+  font-family: poppins;
+  border-radius: 0.250rem;
+  outline: none;
+}
+
+#schedule .form input, #schedule .form select, #schedule .form textarea {
+  border: 1px solid #555555;
+  margin-bottom: 0.5rem;
+}
+
+#schedule .form input:focus, #schedule .form select:focus, #schedule .form textarea:focus {
+  -webkit-box-shadow: 0px 0px 5px 0px #555555;
+          box-shadow: 0px 0px 5px 0px #555555;
+}
+
+#schedule .form textarea {
+  resize: none;
+}
+
+#schedule .form input[type="submit"] {
+  background-color: #6EC72D;
+  color: #fff;
+  border: 1px solid #555555;
+  cursor: pointer;
+}
+
+#schedule #getSubjects {
+  background-color: #6EC72D;
+  color: #fff;
+  border: 1px solid #555555;
+  cursor: pointer;
+}
+
+#schedule #periods {
+  display: none;
+}
+
+footer {
+  text-align: center;
+  margin-top: 2rem;
+  padding: 2rem;
+  background-color: rgba(85, 85, 85, 0.5);
+  color: white;
+}
+
+footer a, footer p {
+  text-decoration: none;
+  color: #fff;
+}
+
+footer .fab {
+  font-size: 1.2em;
+}
+
+footer .fa-twitter {
+  color: #126590;
+}
+
+footer .fa-instagram {
+  color: #8D3DAF;
+}
+
+footer .fa-facebook {
+  color: #207398;
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 180px  350px;
+        grid-template-columns: 180px  350px;
+  }
+  .container #logo {
+    width: 350px;
+  }
+  .container .hamburger {
+    display: none;
+  }
+  .container nav {
+    display: -ms-grid !important;
+    display: grid !important;
+    -ms-grid-columns: 75% auto;
+        grid-template-columns: 75% auto;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    position: unset;
+    color: #555555;
+    background: unset;
+    color: #555555;
+  }
+  .container nav .primary-nav {
+    display: inline;
+  }
+  .container nav .primary-nav li {
+    display: inline-block;
+  }
+  .container nav .primary-nav li:not(:first-child) {
+    margin-left: 1rem;
+  }
+  .container nav .primary-nav li:hover {
+    color: #6EC72D;
+  }
+  .container nav .login-option {
+    color: white;
+    position: absolute;
+    width: 10em;
+    top: 4rem;
+    border-radius: 0.5rem;
+    right: 1rem;
+  }
+  .homepage {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 50% 40% auto;
+        grid-template-columns: 50% 40% auto;
+  }
+  .homepage .circle {
+    margin-top: 50vh;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    width: 25rem;
+    height: 25rem;
+  }
+  .uploader {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 1rem 2rem;
+  }
+  .uploader .form-instruction {
+    width: 70rem;
+    padding: 0 3rem;
+    margin-top: 50vh;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+  }
+  .uploader .form {
+    padding: 0 3rem;
+    width: 70rem;
+  }
+  #schedule #branch-semester {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto auto 150px;
+        grid-template-columns: auto auto 150px;
+    grid-gap: 1rem;
+  }
+  #schedule #branch-semester .branch-semester {
+    margin: 0px 1rem;
+  }
+  #schedule #branch-semester #getSubjects {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
+  #schedule .day {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 150px auto auto auto auto auto auto auto auto auto;
+        grid-template-columns: 150px auto auto auto auto auto auto auto auto auto;
+    margin: 1rem 0rem;
+    grid-gap: 0.5rem;
+  }
+  #schedule .day h2 {
+    font-size: 1.2rem;
+    text-align: left;
+    width: 20rem;
+  }
+  #schedule .day label {
+    margin: 0 0.5rem;
+    display: none;
+  }
+  #schedule #periods {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 150px auto auto auto auto auto auto auto auto auto;
+        grid-template-columns: 150px auto auto auto auto auto auto auto auto auto;
+    margin: 1rem 0rem;
+    grid-gap: 0.5rem;
+  }
+  #schedule #periods .periods {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .uploader {
+    margin: 1rem 10rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */
