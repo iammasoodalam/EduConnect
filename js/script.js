@@ -107,14 +107,14 @@ $(function(){
       data[name] = value;
     });
     console.log(data);
-    // $.ajax({
-    //   url: url,
-    //   type: type,
-    //   data: data,
-    //   success: function(response){
-        
-    //   }
-    // });
+    $.ajax({
+      url: url,
+      type: type,
+      data: data,
+      success: function(response){
+        console.log(response);
+      }
+    });
     return false;
   });
 
