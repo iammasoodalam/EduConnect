@@ -104,7 +104,7 @@ $(function(){
       var that = $(this),
           name = that.attr('name'),
           value = that.val();
-      data[name] = value;
+          data[name] = value;
     });
     console.log(data);
     $.ajax({

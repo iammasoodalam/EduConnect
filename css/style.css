@@ -442,6 +442,21 @@ nav .login-option li:last-child {
   color: #555555;
 }
 
+#schedule .schedule-instruction {
+  margin: 1rem;
+  list-style-type: none;
+  text-align: justify;
+  color: #555555;
+  border-top: 4px solid #6EC72D;
+  border-bottom: 4px solid #6EC72D;
+}
+
+#schedule .schedule-instruction li::before {
+  content: '#';
+  color: #207398;
+  margin-right: 0.5rem;
+}
+
 #schedule select {
   width: 100%;
 }
@@ -601,6 +616,10 @@ footer .fa-facebook {
     padding: 0 3rem;
     width: 70rem;
   }
+  #schedule .schedule-instruction {
+    width: 30rem;
+    margin: 2rem auto;
+  }
   #schedule #branch-semester {
     display: -ms-grid;
     display: grid;
@@ -644,6 +663,13 @@ footer .fa-facebook {
     text-align: center;
     font-weight: bold;
     font-size: 1.2rem;
+  }
+  #schedule .upload-type {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
   }
 }
 

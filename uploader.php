@@ -120,7 +120,15 @@
   </main>
   <main id="schedule" class="" style="display: none;">
     <h2 id="schedule-heading">Schedule uploader for student</h2>
-    <form action="includes/uploadSchedule.inc.php" method="post" class="form" id="schedule-uploader">
+    <ul class="schedule-instruction">
+      <li>First choose the branch in which you want to upload the time-table.</li>
+      <li>Then choose option from semester dropdown, and click on 'Get Subjects' button. </li>
+      <li>It will load all the subjects which is available for that branch and semester.</li>
+      <li>Then fill all the fields which should a value. If any field will left then it will be set to Empty.</li>
+      <li>Now if time table is uploading for the first time then, Choose 'insert' option, otherwise choose update</li>
+      <li>And finally click on Upload button.</li>
+    </ul>
+    <form action="includes/schedule.inc.php" method="post" class="form" id="schedule-uploader">
       <div id="branch-semester">
         <div class="branch" class="branch-semester">
           <label for="chooseBranch">Branch</label>
@@ -401,7 +409,14 @@
           </select>
         </div>
       </div>
-      <input type="submit" value="Upload">
+      <div class="upload-type">
+        <select name="upload-type" id="upload-type">
+          <option value="">Select Upload Type</option>
+          <option value="Insert">Insert</option>
+          <option value="update">Update</option>
+        </select>
+        <input type="submit" value="Upload">
+      </div>
     </form>
   </main>
   <?php include "includes/footer.inc.php"; ?>

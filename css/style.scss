@@ -382,6 +382,22 @@ nav{
     font-size: 1.8rem;
     color: $grey;
   }
+  .schedule-instruction{
+    margin: 1rem;
+    list-style-type: none;
+    text-align: justify;
+    color: $grey;
+    border-top: 4px solid $lightGreen;
+    border-bottom: 4px solid $lightGreen;
+    li{
+      &::before{
+        content: '#';
+        color: $blue;
+        margin-right: 0.5rem;
+      }
+    }
+  }
+  
   select{
     width: 100%;
   }
@@ -527,7 +543,10 @@ footer{
     }
   }
   #schedule{
-
+    .schedule-instruction{
+      width: 30rem;
+      margin: 2rem auto;
+    }
     #branch-semester{
       display: grid;
       grid-template-columns: auto auto 150px;
@@ -567,6 +586,11 @@ footer{
         font-weight: bold;
         font-size: 1.2rem;
       }
+    }
+    .upload-type{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 1rem;
     }
   }
 }
