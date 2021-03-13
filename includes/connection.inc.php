@@ -2,7 +2,7 @@
 $host = "localhost";
 $user = "root";
 $pass = "";
-$db = "project";
+$db = "educonnect";
 $mysqli = new mysqli($host, $user, $pass, $db);
 
 if($mysqli->connect_error){

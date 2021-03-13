@@ -15,6 +15,8 @@
     $semester = test_input($_POST["semester"]);
     $address = test_input($_POST["studAddress"]);
 
+    $hashedpass = password_hash($password, PASSWORD_DEFAULT);
+
     function test_input($data) {
       $data = trim($data);
       $data = stripslashes($data);
@@ -33,7 +35,7 @@
     $phonestmt = $mysqli->prepare($phoneQuery);
 
     if($stmt && $phonestmt){
-      $stmt->bind_param("sssssssssss", $enrollment, $faculty, $studentName, $fathersName, $emailId, $dateOfBirth, $password, $address, $joinDate, $branch, $semester);
+      $stmt->bind_param("sssssssssss", $enrollment, $faculty, $studentName, $fathersName, $emailId, $dateOfBirth, $hashedpass, $address, $joinDate, $branch, $semester);
       $phonestmt->bind_param("ss", $enrollment, $phone);
 
       if($stmt->execute() && $phonestmt->execute()){

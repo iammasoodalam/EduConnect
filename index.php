@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
   <script src="./js/jQuery.js"></script>
   <script src="./js/popper.js"></script>
+  <link rel="shortcut icon" href="favicon.svg" type="image/x-icon">
   <link rel="stylesheet" href="./css/style.css?v=<?php echo time(); ?>">
   <title>EduConnect - A Single learning plateform to connect student and teachers directly</title>
 </head>
@@ -23,7 +24,7 @@
         </ul>
         <div class="login-cta">Login <i class="fas fa-caret-down"></i></div>
         <ul class="login-option">
-          <li>Student</li><li>Professor</li>
+          <li>Student</li><li>Professor</li><li>Admin</li>
         </ul>
       </nav>
     </div>

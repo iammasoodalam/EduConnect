@@ -436,6 +436,51 @@ nav .login-option li:last-child {
   margin: 1rem;
 }
 
+#schedule #schedule-result {
+  position: relative;
+  overflow-x: scroll;
+  background-color: rgba(85, 85, 85, 0.3);
+  padding: 1rem 0.25rem;
+  border-radius: 0.5rem;
+}
+
+#schedule #schedule-result .close-schedule-result {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  line-height: 1.2rem;
+  width: 1.2rem;
+  text-align: center;
+  border-radius: 0.25rem;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #dd0404;
+}
+
+#schedule #schedule-result table, #schedule #schedule-result td, #schedule #schedule-result th {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+#schedule #schedule-result tr:nth-child(even) {
+  background-color: #555555;
+  color: #fff;
+}
+
+#schedule #schedule-result td, #schedule #schedule-result th {
+  padding: 0.5rem;
+}
+
+#schedule #schedule-result td:first-child, #schedule #schedule-result th:first-child {
+  font-weight: bold;
+}
+
+#schedule #schedule-result td:not(:first-child), #schedule #schedule-result th:not(:first-child) {
+  min-width: 6rem;
+  text-align: center;
+}
+
 #schedule-heading {
   text-align: center;
   font-size: 1.8rem;
@@ -615,6 +660,12 @@ footer .fa-facebook {
   .uploader .form {
     padding: 0 3rem;
     width: 70rem;
+  }
+  #schedule #schedule-result h2, #schedule #schedule-result h3 {
+    text-align: center;
+  }
+  #schedule #schedule-result table {
+    margin: auto auto;
   }
   #schedule .schedule-instruction {
     width: 30rem;

@@ -112,11 +112,19 @@ $(function(){
       type: type,
       data: data,
       success: function(response){
-        console.log(response);
+        $("#schedule-result").html(response);
+        $("#schedule-result").slideDown(300);
       }
     });
+    $('html, body').animate({
+      scrollTop: $("#navbar").offset().top
+    }, 100);
     return false;
   });
+
+  closeScheduleOutput = () => {
+    $("#schedule-result").slideUp(300);
+  }
 
 });
 

@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
   <script src="./js/jQuery.js"></script>
   <script src="./js/popper.js"></script>
+  <link rel="shortcut icon" href="favicon.svg" type="image/x-icon">
   <link rel="stylesheet" href="./css/style.css?v=<?php echo time(); ?>">
   <title>EduConnect - A Single learning plateform to connect student and teachers directly</title>
 </head>
@@ -63,7 +64,16 @@
         <label for="branch">Branch</label>
         <select name="branch" id="branch">
           <option value="">Select Option</option>
-          <option value="1">Computer Engineering</option>
+          <option value="1">Architechtural Assistantship</option>
+          <option value="2">Interior Design</option>
+          <option value="3">Civil Engineering</option>
+          <option value="4">Advanced Dip. In Food Technology</option>
+          <option value="5">Computer Engineering</option>
+          <option value="6">Electronics Engineering</option>
+          <option value="7">Electrical Engineering</option>
+          <option value="8">Instrumentation & control</option>
+          <option value="9">Leather & Footwear Technology</option>
+          <option value="10">Machenical Engineering</option>
         </select>
         <label for="semester">Semester</label>
         <select name="semester" id="semester">
@@ -119,6 +129,9 @@
     </div>
   </main>
   <main id="schedule" class="" style="display: none;">
+    <div id="schedule-result" style="display: none;">
+      
+    </div>
     <h2 id="schedule-heading">Schedule uploader for student</h2>
     <ul class="schedule-instruction">
       <li>First choose the branch in which you want to upload the time-table.</li>
