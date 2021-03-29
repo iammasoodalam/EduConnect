@@ -9,6 +9,6 @@
     <a href="#">Privacy policy</a><br>
     <p>&copy 2020 &bull; iammasoodalam.com</p>
   </footer>
-  <script src="./js/script.js?v=<?php echo time(); ?>"></script>
+  <script src="./js/script.js?v=<?= time(); ?>"></script>
 </body>
 </html>

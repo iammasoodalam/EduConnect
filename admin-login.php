@@ -7,7 +7,7 @@ require_once "./includes/header.inc.php";
       <div class="heading">Admin Login</div>
       <ul class="instruction">
         <li>Use your User ID provided by the Head Admininistrator.</li>
-        <li>If you are never reset your password then your password is the same as provided by the Administrator.</li>
+        <li>If you had never reset your password then your password is the same as provided by the Administrator.</li>
       </ul>
       <div class="result"></div>
       <i class="fas fa-user"></i>

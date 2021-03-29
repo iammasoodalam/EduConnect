@@ -12,20 +12,52 @@
   <title>EduConnect - A Single learning plateform to connect student and teachers directly</title>
 </head>
 <body>
+  <?php session_start(); ?>
   <header class="navbar">
     <div class="container">
-      <a id="logo" href="#">Edu<span>Connect</span></a>
+      <a id="logo" onclick="toHome()">Edu<span>Connect</span></a>
       <div class="hamburger">
         <span></span><span></span><span></span>
       </div>
       <nav>
-        <ul class="primary-nav">
-          <li onclick="toHome()">Home</li><li>About</li><li onclick="toContact()">Contact</li>
-        </ul>
-        <div class="login-cta">Login <i class="fas fa-caret-down"></i></div>
-        <ul class="login-option">
-          <li onclick="toStudent()">Student</li><li onclick="toProfessor()">Professor</li><li onclick="toAdmin()">Admin</li>
-        </ul>
+        <?php
+        if(empty($_SESSION)){
+          ?>
+          <ul class="primary-nav">
+            <li onclick="toHome()">Home</li><li>About</li><li onclick="toContact()">Contact</li>
+          </ul>
+          <div class="login-cta">Login <i class="fas fa-caret-down"></i></div>
+          <ul class="login-option">
+            <li onclick="toStudent()">Student</li><li onclick="toProfessor()">Professor</li><li onclick="toAdmin()">Admin</li>
+          </ul>
+          <?php
+        } else {
+          if($_SESSION['userType'] == "professor"){
+            ?>
+            <ul class="primary-nav">
+              <li onclick="toHome()">Home</li><li>Upload</li><li onclick="toContact()">Assingnemt</li><li>Profile</li>
+            </ul>
+            <?php
+          } else if($_SESSION['userType'] == "student"){
+            ?>
+            <ul class="primary-nav">
+              <li onclick="toHome()">Home</li><li>Lecture Notes</li><li>Assingnemt</li><li>Profile</li>
+            </ul>
+            <?php
+          } else{
+            ?>
+            <ul class="primary-nav">
+              <li id="nav-stu">Student</li><li id="nav-pro">Professor</li><li id="nav-schedule">Schedule</li>
+            </ul>
+            <?php
+          }
+          ?>
+          <div class="login-cta" onclick="logout()">Logout</i></div>
+
+          <?php
+        }
+
+        ?>
       </nav>
     </div>
   </header>

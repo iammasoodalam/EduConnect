@@ -23,6 +23,7 @@ html{
 body{
   background: $lightGrey;
   font-family: poppins;
+  font-weight: 300;
 }
 input, textarea{
   &:focus{
@@ -81,9 +82,10 @@ nav{
   justify-content: space-between;
   padding: 0.5em 1.25rem;
   a{
-    font-weight: bolder;
+    font-weight: 900;
     font-size: 1.5rem;
     text-decoration: none;
+    cursor: pointer;
     span{
       color: $lightGreen;
     }
@@ -588,7 +590,7 @@ nav{
       border-radius: 0.5rem;
       .instruction{
         list-style-type: none;
-        margin: 1rem;
+        margin-bottom: 1rem;
         ::before{
           content: "# ";
           color: $darkGrey;
@@ -651,7 +653,7 @@ footer{
   
   .container{
     display: grid;
-    grid-template-columns: 180px  350px;
+    grid-template-columns: 2fr 10fr;
 
     #logo{
       width: 350px;
@@ -670,6 +672,8 @@ footer{
 
       .primary-nav{
         display: inline;
+        justify-self: flex-end;
+        margin-right: 1rem;
         li{
           display: inline-block;
           &:not(:first-child){

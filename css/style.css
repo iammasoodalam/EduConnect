@@ -13,6 +13,7 @@ html {
 body {
   background: #f2f2f2;
   font-family: poppins;
+  font-weight: 300;
 }
 
 input:focus, textarea:focus {
@@ -87,9 +88,10 @@ nav .login-option li:last-child {
 }
 
 .container a {
-  font-weight: bolder;
+  font-weight: 900;
   font-size: 1.5rem;
   text-decoration: none;
+  cursor: pointer;
 }
 
 .container a span {
@@ -693,7 +695,7 @@ nav .login-option li:last-child {
 
 #login > div form .instruction {
   list-style-type: none;
-  margin: 1rem;
+  margin-bottom: 1rem;
 }
 
 #login > div form .instruction ::before {
@@ -761,8 +763,8 @@ footer .fa-facebook {
   .container {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 180px  350px;
-        grid-template-columns: 180px  350px;
+    -ms-grid-columns: 2fr 10fr;
+        grid-template-columns: 2fr 10fr;
   }
   .container #logo {
     width: 350px;
@@ -785,6 +787,8 @@ footer .fa-facebook {
   }
   .container nav .primary-nav {
     display: inline;
+    justify-self: flex-end;
+    margin-right: 1rem;
   }
   .container nav .primary-nav li {
     display: inline-block;

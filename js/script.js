@@ -28,7 +28,10 @@ $(function(){
     location.href = "./contact.php";
   }
   toHome = () => {
-    location.href = "./";
+    location.href = "./home.php";
+  }
+  logout = () => {
+    location.href = "./includes/logout.inc.php";
   }
 
   //Input for Student/professor or schedule-------//////////////////////////////////////////
@@ -54,7 +57,7 @@ $(function(){
     hamburger.removeClass("nav-open");
   });
 
-  //Student form input------------///////////////////////////////////////////////////////
+  //Student and Professor form input------------/////////////////////
 
   closeOutput = () => {
     $("#resultStudent").slideUp(300);
@@ -73,6 +76,7 @@ $(function(){
             value = that.val();
         data[name] = value;
       });
+      console.log(data);
       $.ajax({
         url: url,
         type: type,
@@ -82,9 +86,7 @@ $(function(){
           result.slideDown(300);
         }
       });
-      $('html, body').animate({
-        scrollTop: $("#navbar").offset().top
-      }, 100);
+      $('html, body').animate({ scrollTop: 0 }, 100);
   
       return false;
     });
@@ -93,7 +95,7 @@ $(function(){
   formResult($("form.studentForm"), $("#resultStudent"));
   formResult($("form.professorForm"), $("#resultProfessor"));
 
-  //Schedule insertion ----------------////////////////////////////////////////
+  //Schedule insertion ----------------//////////////////////////////////
   $("#getSubjects").on("click", function(){
     var semester = $("#chooseSemester"),
         branch = $("#chooseBranch");
@@ -131,9 +133,7 @@ $(function(){
         $("#schedule-result").slideDown(300);
       }
     });
-    $('html, body').animate({
-      scrollTop: $("#navbar").offset().top
-    }, 100);
+    $('html, body').animate({ scrollTop: 0 }, 100);
     return false;
   });
 
@@ -182,7 +182,7 @@ $(function(){
         type: type,
         data: data,
         success: function(response){
-          if (response != "verified") {
+          if (response == "verified") {
             location.href = redirect;
           }
           else{
@@ -195,6 +195,10 @@ $(function(){
   };
 
   loginForm($("#admin-login-form"), $(".result"), "./uploader.php");
+  loginForm($("#professor-login-form"), $(".result"), "./home.php");
+  loginForm($("#student-login-form"), $(".result"), "./home.php");
+
+  
 });
 
 
