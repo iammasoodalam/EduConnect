@@ -15,6 +15,10 @@ body {
   font-family: poppins;
 }
 
+input:focus, textarea:focus {
+  outline: none;
+}
+
 .navbar {
   background-color: #fff;
   -webkit-box-shadow: 0em 0.125em 0.5em 0em #555555;
@@ -578,6 +582,11 @@ nav .login-option li:last-child {
           box-sizing: border-box;
   -webkit-box-shadow: 4px 4px 0px 0px rgba(85, 85, 85, 0.6);
           box-shadow: 4px 4px 0px 0px rgba(85, 85, 85, 0.6);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#contact form input:focus, #contact form textarea:focus {
+  outline: none;
 }
 
 #contact form textarea {
@@ -634,6 +643,18 @@ nav .login-option li:last-child {
           flex-direction: column;
 }
 
+#login > div .heading {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+#login > div .result {
+  color: #710000;
+  text-align: center;
+}
+
 #login > div i {
   position: absolute;
   width: 5rem;
@@ -655,12 +676,34 @@ nav .login-option li:last-child {
 }
 
 #login > div form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   color: white;
   margin-top: 4rem;
   padding: 2rem;
   padding-top: 4rem;
   background: linear-gradient(127deg, #00BC40, #4C3AE3);
   border-radius: 0.5rem;
+}
+
+#login > div form .instruction {
+  list-style-type: none;
+  margin: 1rem;
+}
+
+#login > div form .instruction ::before {
+  content: "# ";
+  color: #242B2E;
+}
+
+#login > div form .instruction li {
+  color: rgba(255, 255, 255, 0.7);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.6);
 }
 
 #login > div form label, #login > div form input {
@@ -678,6 +721,11 @@ nav .login-option li:last-child {
 #login > div form input[type="submit"] {
   background-color: #43C12B;
   color: #fff;
+  margin-top: 2rem;
+  width: 8rem;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  cursor: pointer;
 }
 
 footer {
@@ -866,6 +914,20 @@ footer .fa-facebook {
 @media only screen and (min-width: 1200px) {
   .uploader {
     margin: 1rem 10rem;
+  }
+}
+
+@media only screen and (min-width: 500px) {
+  #login {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #login #student-login, #login #professor-login, #login #admin-login {
+    width: 500px;
   }
 }
 /*# sourceMappingURL=style.css.map */

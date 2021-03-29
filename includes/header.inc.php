@@ -24,7 +24,7 @@
         </ul>
         <div class="login-cta">Login <i class="fas fa-caret-down"></i></div>
         <ul class="login-option">
-          <li>Student</li><li>Professor</li><li onclick="toAdmin()">Admin</li>
+          <li onclick="toStudent()">Student</li><li onclick="toProfessor()">Professor</li><li onclick="toAdmin()">Admin</li>
         </ul>
       </nav>
     </div>

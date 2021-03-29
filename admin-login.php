@@ -2,19 +2,19 @@
 require_once "./includes/header.inc.php";
 ?>
 <main id="login">
-  <div id="student-login">
-    <form action="includes/student-login.inc.php" id="student-login-form" method="POST">
-      <div class="heading">Student Login</div>
+  <div id="admin-login">
+    <form action="./includes/admin-login-inc.php" id="admin-login-form" method="POST">
+      <div class="heading">Admin Login</div>
       <ul class="instruction">
-        <li>Use your Enrollment number provided by the Administration, like (GL2402).</li>
+        <li>Use your User ID provided by the Head Admininistrator.</li>
         <li>If you are never reset your password then your password is the same as provided by the Administrator.</li>
       </ul>
       <div class="result"></div>
       <i class="fas fa-user"></i>
-      <label for="enrollment">Enrollment Number</label>
-      <input type="text" name="enrollment" id="enrollment">
+      <label for="userId">User ID</label>
+      <input type="text" name="userId" id="userId" required>
       <label for="password">Password</label>
-      <input type="password" name="password" id="password">
+      <input type="password" name="password" id="password" required>
       <input type="submit" value="Login">
     </form>
   </div>
