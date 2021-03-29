@@ -425,7 +425,7 @@
       <div class="upload-type">
         <select name="upload-type" id="upload-type">
           <option value="">Select Upload Type</option>
-          <option value="Insert">Insert</option>
+          <option value="insert">Insert</option>
           <option value="update">Update</option>
         </select>
         <input type="submit" value="Upload">

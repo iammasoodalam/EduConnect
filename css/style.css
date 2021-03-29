@@ -131,8 +131,8 @@ nav .login-option li:last-child {
 }
 
 .homepage .circle {
-  -webkit-box-shadow: 0px 0px 0.5rem 0rem #555555;
-          box-shadow: 0px 0px 0.5rem 0rem #555555;
+  -webkit-box-shadow: 4px 4px 1rem 0rem rgba(85, 85, 85, 0.6), -4px -4px 1rem 0rem #fff;
+          box-shadow: 4px 4px 1rem 0rem rgba(85, 85, 85, 0.6), -4px -4px 1rem 0rem #fff;
   margin: 0.5rem auto;
   width: 80vw;
   height: 80vw;
@@ -168,7 +168,6 @@ nav .login-option li:last-child {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 1px solid #555555;
   border-radius: 0.5rem;
   background-color: rgba(85, 85, 85, 0.5);
 }
@@ -556,6 +555,131 @@ nav .login-option li:last-child {
   display: none;
 }
 
+#contact {
+  min-height: 67vh;
+  margin: 1rem;
+}
+
+#contact h2 {
+  text-align: center;
+}
+
+#contact form {
+  margin: 0rem 1rem;
+}
+
+#contact form input, #contact form textarea {
+  margin-bottom: 0.5rem;
+  border: 1px solid rgba(85, 85, 85, 0.6);
+  border-radius: 0.5rem;
+  width: 100%;
+  padding: 0.5rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 4px 4px 0px 0px rgba(85, 85, 85, 0.6);
+          box-shadow: 4px 4px 0px 0px rgba(85, 85, 85, 0.6);
+}
+
+#contact form textarea {
+  resize: none;
+}
+
+#contact form input[type='submit'] {
+  width: 10rem;
+  background-color: #43C12B;
+  color: #fff;
+  font-size: 1rem;
+}
+
+#contact .contact-links {
+  margin: 0rem 1rem;
+}
+
+#contact .contact-links p {
+  text-align: justify;
+}
+
+#contact .contact-links div.links {
+  margin: 1rem 0rem;
+}
+
+#contact .contact-links div.links i {
+  width: 1.5rem;
+}
+
+#contact .contact-links div.links i:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+#contact .contact-links div.links span {
+  color: #8D3DAF;
+  font-weight: bold;
+}
+
+#login {
+  margin: 1rem;
+}
+
+#login > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#login > div i {
+  position: absolute;
+  width: 5rem;
+  height: 5rem;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  text-align: center;
+  padding: 1rem;
+  font-size: 3rem;
+  border-radius: 50%;
+  border: 0.25rem solid #fff;
+  top: 1.5rem;
+  right: 50%;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+  background-color: #43C12B;
+  color: #4C3AE3;
+}
+
+#login > div form {
+  color: white;
+  margin-top: 4rem;
+  padding: 2rem;
+  padding-top: 4rem;
+  background: linear-gradient(127deg, #00BC40, #4C3AE3);
+  border-radius: 0.5rem;
+}
+
+#login > div form label, #login > div form input {
+  width: 100%;
+  padding: 0.4rem;
+  margin-bottom: 0.3rem;
+  border-radius: 0.25rem;
+  font-family: Montserrat, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#login > div form input {
+  border: 1px solid rgba(85, 85, 85, 0.6);
+}
+
+#login > div form input[type="submit"] {
+  background-color: #43C12B;
+  color: #fff;
+}
+
 footer {
   text-align: center;
   margin-top: 2rem;
@@ -721,6 +845,21 @@ footer .fa-facebook {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
     grid-gap: 1rem;
+  }
+  #contact {
+    margin: 1rem 10rem;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    grid-gap: 10rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #contact h2 {
+    margin-left: 1rem;
+    text-align: left;
   }
 }
 
