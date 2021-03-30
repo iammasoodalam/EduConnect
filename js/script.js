@@ -33,6 +33,9 @@ $(function(){
   logout = () => {
     location.href = "./includes/logout.inc.php";
   }
+  toProfile = () => {
+    location.href = "./profile.php";
+  }
 
   //Input for Student/professor or schedule-------//////////////////////////////////////////
   $("#nav-pro").on("click", function(){

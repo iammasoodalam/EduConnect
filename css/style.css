@@ -734,20 +734,24 @@ nav .login-option li:last-child {
   margin: 1rem;
 }
 
-#home #schedule-section {
+#profile {
+  margin: 1rem;
+}
+
+#schedule-section {
   position: relative;
 }
 
-#home #schedule-section h2 {
+#schedule-section h2 {
   text-align: center;
 }
 
-#home #schedule-section #time-table {
+#schedule-section #time-table {
   padding: 1rem 2rem;
   color: white;
 }
 
-#home #schedule-section #time-table .period {
+#schedule-section #time-table .period {
   display: none;
   -ms-grid-columns: 3fr 9fr;
       grid-template-columns: 3fr 9fr;
@@ -757,17 +761,29 @@ nav .login-option li:last-child {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-shadow: 0rem 0rem 2rem 0rem #555555;
+          box-shadow: 0rem 0rem 2rem 0rem #555555;
 }
 
-#home #schedule-section #time-table .period .time {
+#schedule-section #time-table .period .time {
   text-align: center;
 }
 
-#home #schedule-section #time-table .period .subject {
+#schedule-section #time-table .period .subject {
   padding-left: 1rem;
 }
 
-#home #schedule-section #time-table button {
+#schedule-section #time-table .period .subject-name {
+  color: #23C4ED;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+#schedule-section #time-table .period .subject .professor-name {
+  color: #d5ff89;
+}
+
+#schedule-section #time-table button {
   width: 1.3rem;
   height: 1.3rem;
   border-radius: 50%;
@@ -781,19 +797,23 @@ nav .login-option li:last-child {
   font-weight: bold;
   background-color: #1C8D73;
   color: white;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
-#home #schedule-section #time-table button#previous {
+#schedule-section #time-table button#previous {
   left: 0rem;
   top: 50%;
 }
 
-#home #schedule-section #time-table button#next {
+#schedule-section #time-table button#next {
   right: 0rem;
   top: 50%;
 }
 
-#home #schedule-section #time-table button:focus {
+#schedule-section #time-table button:focus {
   outline: none;
 }
 
@@ -803,6 +823,10 @@ footer {
   padding: 2rem;
   background-color: rgba(85, 85, 85, 0.5);
   color: white;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 footer a, footer p {
@@ -830,8 +854,8 @@ footer .fa-facebook {
   .container {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 2fr 10fr;
-        grid-template-columns: 2fr 10fr;
+    -ms-grid-columns: 200px 1fr;
+        grid-template-columns: 200px 1fr;
   }
   .container #logo {
     width: 350px;

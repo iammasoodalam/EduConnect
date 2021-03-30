@@ -624,52 +624,66 @@ nav{
 #home{
   margin: 1rem;
 
-  #schedule-section{
-    position: relative;
-    h2{
-      text-align: center;
-    }
-    #time-table{
-      padding: 1rem 2rem;
-      color: white;
-      .period{
-        display: none; //grid
-        grid-template-columns: 3fr 9fr;
-        background-color: $teal;
-        border-radius: 0.5rem;
-        padding: 1rem 0rem;
-        align-items: center;
-        .time{
-          text-align: center;
+  
+}
+#profile{
+  margin: 1rem;
+}
+#schedule-section{
+  position: relative;
+  h2{
+    text-align: center;
+  }
+  #time-table{
+    padding: 1rem 2rem;
+    color: white;
+    .period{
+      display: none; //grid
+      grid-template-columns: 3fr 9fr;
+      background-color: $teal;
+      border-radius: 0.5rem;
+      padding: 1rem 0rem;
+      align-items: center;
+      box-shadow: 0rem 0rem 2rem 0rem $grey;
+      .time{
+        text-align: center;
+      }
+      .subject{
+        padding-left: 1rem;
+        &-name{
+          color: $skyblue;
+          font-size: 1rem;
+          font-weight: bold;
         }
-        .subject{
-          padding-left: 1rem;
+        .professor-name{
+          color: #d5ff89;
         }
       }
-      button{
-        width: 1.3rem;
-        height: 1.3rem;
-        border-radius: 50%;
-        text-align: center;
-        line-height: 1.3rem;
-        border: 1px solid rgba($color: $teal, $alpha: 1);
-        position: absolute;
-        font-family: poppins, sans-serif;
-        transform: translateY(50%);
-        font-weight: bold;
-        background-color: $teal;
-        color: white;
-        &#previous{
-          left: 0rem;
-          top: 50%;
-        }
-        &#next{
-          right: 0rem;
-          top: 50%;
-        }
-        &:focus{
-          outline: none;
-        }
+    }
+    button{
+      width: 1.3rem;
+      height: 1.3rem;
+      border-radius: 50%;
+      text-align: center;
+      line-height: 1.3rem;
+      border: 1px solid rgba($color: $teal, $alpha: 1);
+      position: absolute;
+      font-family: poppins, sans-serif;
+      transform: translateY(50%);
+      font-weight: bold;
+      background-color: $teal;
+      color: white;
+      user-select: none;
+      &#previous{
+        left: 0rem;
+        top: 50%;
+      }
+      &#next{
+        right: 0rem;
+        top: 50%;
+      }
+      &:focus{
+        outline: none;
       }
     }
   }
@@ -680,6 +694,7 @@ footer{
   padding: 2rem;
   background-color: rgba($color: $grey, $alpha: 0.5);
   color: white;
+  user-select: none;
 
   a,p{
     text-decoration: none;
@@ -706,7 +721,7 @@ footer{
   
   .container{
     display: grid;
-    grid-template-columns: 2fr 10fr;
+    grid-template-columns: 200px 1fr;
 
     #logo{
       width: 350px;
