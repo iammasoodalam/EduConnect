@@ -32,6 +32,7 @@
           </ul>
           <?php
         } else {
+          include "./includes/connection.inc.php";
           if($_SESSION['userType'] == "professor"){
             ?>
             <ul class="primary-nav">

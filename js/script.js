@@ -198,7 +198,25 @@ $(function(){
   loginForm($("#professor-login-form"), $(".result"), "./home.php");
   loginForm($("#student-login-form"), $(".result"), "./home.php");
 
-  
+  //HOME section ----------------////////////////////////////////////
+  var periodIndex = 1;
+  if($(".period").length == 0){
+    $("#schedule-section").css("display", "none");
+  }
+  showSlides = (n) => {
+    var i,
+        period = $(".period");
+    if(n > period.length) {periodIndex = period.length};
+    if(n < 1) {periodIndex = 1};
+    for(i = 0; i < period.length; i++){
+      $(period).css("display", "none");
+    }
+    $(period[periodIndex - 1]).css("display", "grid");
+  }
+  showSlides(periodIndex);
+  plusSlides = (n) => {
+    showSlides(periodIndex += n);
+  }
 });
 
 

@@ -142,7 +142,7 @@ nav{
       text-align: center;
 
     }
-    .period{
+    .period-example{
       display: flex;
       width: 90%;
       margin: 0.125rem auto;
@@ -616,6 +616,59 @@ nav{
           width: 8rem;
           align-self: flex-end;
           cursor: pointer;
+        }
+      }
+    }
+  }
+}
+#home{
+  margin: 1rem;
+
+  #schedule-section{
+    position: relative;
+    h2{
+      text-align: center;
+    }
+    #time-table{
+      padding: 1rem 2rem;
+      color: white;
+      .period{
+        display: none; //grid
+        grid-template-columns: 3fr 9fr;
+        background-color: $teal;
+        border-radius: 0.5rem;
+        padding: 1rem 0rem;
+        align-items: center;
+        .time{
+          text-align: center;
+        }
+        .subject{
+          padding-left: 1rem;
+        }
+      }
+      button{
+        width: 1.3rem;
+        height: 1.3rem;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 1.3rem;
+        border: 1px solid rgba($color: $teal, $alpha: 1);
+        position: absolute;
+        font-family: poppins, sans-serif;
+        transform: translateY(50%);
+        font-weight: bold;
+        background-color: $teal;
+        color: white;
+        &#previous{
+          left: 0rem;
+          top: 50%;
+        }
+        &#next{
+          right: 0rem;
+          top: 50%;
+        }
+        &:focus{
+          outline: none;
         }
       }
     }

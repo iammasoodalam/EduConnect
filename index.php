@@ -1,7 +1,15 @@
-
-  <?php
-  require "./includes/header.inc.php";
-  ?>
+<?php require "./includes/header.inc.php";
+if(!empty($_SESSION)){
+  if($_SESSION['userType'] == "admin"){
+    header("Location: ./uploader.php");
+    exit();
+  }
+  if($_SESSION['userType'] == "student" || $_SESSION['userType'] == "professor"){
+    header("Location: ./home.php");
+    exit();
+  }
+}
+?>
   <main class="homepage">
     <div class="circle">
       <h1>Welcome to EduConnect</h1>
@@ -10,7 +18,7 @@
     <div class="contents">
       <div class="timetable"><!--Time table Section-->
         <h2>Time Table</h2>
-        <div class="period">
+        <div class="period-example">
           <div class="duration">
             08:00<br>|<br>08:50
           </div>

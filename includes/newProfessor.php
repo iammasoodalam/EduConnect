@@ -31,10 +31,10 @@
 
     if($stmt && $phonestmt){
       $stmt->bind_param("sssssss", $professorId, $professorName, $qualification, $profAddress, $profJoinDate, $profEmailId, $hashedpass);
-      $phonestmt->bind_param("ss", $professorId, $phone);
+      $phonestmt->bind_param("ss", $professorId, $profPhone);
 
-      if($stmt->execute()&& $stmt->close()){
-        $phonestmt->execute();
+      if($stmt->execute()&& $phonestmt->execute()){
+        $stmt->close();
         $phonestmt->close();
         ?>
         <div id="close" onclick="closeOutput()">&times;</div>

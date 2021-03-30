@@ -11,7 +11,7 @@ function test_input($data) {
 $userName = test_input($_POST['enrollment']);
 $password = test_input($_POST['password']);
 
-$sql = "SELECT `enrollment`, `password` FROM `student` WHERE `enrollment` = ?";
+$sql = "SELECT * FROM `student` WHERE `enrollment` = ?";
 
 $stmt = $mysqli->prepare($sql);
 $stmt->bind_param("s", $userName);
@@ -23,8 +23,10 @@ if($result->num_rows > 0){
   $row = $result->fetch_assoc();
   if(password_verify($password, $row['password'])){
     session_start();
-    $_SESSION['userName'] = $userName;
     $_SESSION['userType'] = "student";
+    foreach ($row as $key => $value) {
+      $_SESSION[$key] = $value;
+    }
     echo "verified";
     exit();
   } else {

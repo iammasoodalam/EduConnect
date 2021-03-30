@@ -165,7 +165,7 @@ nav .login-option li:last-child {
   text-align: center;
 }
 
-.homepage .timetable .period {
+.homepage .timetable .period-example {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -178,7 +178,7 @@ nav .login-option li:last-child {
   background-color: rgba(85, 85, 85, 0.5);
 }
 
-.homepage .timetable .period .duration {
+.homepage .timetable .period-example .duration {
   text-align: center;
   width: 20%;
   padding: 1rem;
@@ -187,7 +187,7 @@ nav .login-option li:last-child {
   color: #fff;
 }
 
-.homepage .timetable .period .subject-class {
+.homepage .timetable .period-example .subject-class {
   padding-left: 1rem;
   width: 80%;
 }
@@ -728,6 +728,73 @@ nav .login-option li:last-child {
   -ms-flex-item-align: end;
       align-self: flex-end;
   cursor: pointer;
+}
+
+#home {
+  margin: 1rem;
+}
+
+#home #schedule-section {
+  position: relative;
+}
+
+#home #schedule-section h2 {
+  text-align: center;
+}
+
+#home #schedule-section #time-table {
+  padding: 1rem 2rem;
+  color: white;
+}
+
+#home #schedule-section #time-table .period {
+  display: none;
+  -ms-grid-columns: 3fr 9fr;
+      grid-template-columns: 3fr 9fr;
+  background-color: #1C8D73;
+  border-radius: 0.5rem;
+  padding: 1rem 0rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#home #schedule-section #time-table .period .time {
+  text-align: center;
+}
+
+#home #schedule-section #time-table .period .subject {
+  padding-left: 1rem;
+}
+
+#home #schedule-section #time-table button {
+  width: 1.3rem;
+  height: 1.3rem;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 1.3rem;
+  border: 1px solid #1c8d73;
+  position: absolute;
+  font-family: poppins, sans-serif;
+  -webkit-transform: translateY(50%);
+          transform: translateY(50%);
+  font-weight: bold;
+  background-color: #1C8D73;
+  color: white;
+}
+
+#home #schedule-section #time-table button#previous {
+  left: 0rem;
+  top: 50%;
+}
+
+#home #schedule-section #time-table button#next {
+  right: 0rem;
+  top: 50%;
+}
+
+#home #schedule-section #time-table button:focus {
+  outline: none;
 }
 
 footer {
