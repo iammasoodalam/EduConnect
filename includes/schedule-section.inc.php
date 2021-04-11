@@ -71,7 +71,7 @@
         }
       }
       else{
-        echo "Holiday";
+        echo "<div class= 'holiday'>Holiday</div>";
       }
       ?>
       <!-- <div class="period">

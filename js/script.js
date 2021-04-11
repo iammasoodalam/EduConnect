@@ -202,24 +202,51 @@ $(function(){
   loginForm($("#student-login-form"), $(".result"), "./home.php");
 
   //HOME section ----------------////////////////////////////////////
-  var periodIndex = 1;
-  if($(".period").length == 0){
-    $("#schedule-section").css("display", "none");
-  }
-  showSlides = (n) => {
-    var i,
-        period = $(".period");
-    if(n > period.length) {periodIndex = period.length};
-    if(n < 1) {periodIndex = 1};
-    for(i = 0; i < period.length; i++){
-      $(period).css("display", "none");
+  if($(document).width() < 768){
+    var periodIndex = 1;
+    // if($(".period").length == 0){
+    //   $("#schedule-section").css("display", "none");
+    // }
+    showSlides = (n) => {
+      var i,
+          period = $(".period");
+      if(n > period.length) {periodIndex = period.length};
+      if(n < 1) {periodIndex = 1};
+      for(i = 0; i < period.length; i++){
+        $(period).css("display", "none");
+      }
+      $(period[periodIndex - 1]).css("display", "grid");
     }
-    $(period[periodIndex - 1]).css("display", "grid");
+    showSlides(periodIndex);
+    plusSlides = (n) => {
+      showSlides(periodIndex += n);
+    }
   }
-  showSlides(periodIndex);
-  plusSlides = (n) => {
-    showSlides(periodIndex += n);
-  }
+  $(window).on("resize", function () {
+    if($(window).width() < 768){
+      var periodIndex = 1;
+      // if($(".period").length == 0){
+      //   $("#schedule-section").css("display", "none");
+      // }
+      showSlides = (n) => {
+        var i,
+            period = $(".period");
+        if(n > period.length) {periodIndex = period.length};
+        if(n < 1) {periodIndex = 1};
+        for(i = 0; i < period.length; i++){
+          $(period).css("display", "none");
+        }
+        $(period[periodIndex - 1]).css("display", "grid");
+      }
+      showSlides(periodIndex);
+      plusSlides = (n) => {
+        showSlides(periodIndex += n);
+      }
+    }
+    else{
+      $(".period").css("display", "grid");
+    }
+  })
 });
 
 

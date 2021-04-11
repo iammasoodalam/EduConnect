@@ -12,7 +12,10 @@
   <title>EduConnect - A Single learning plateform to connect student and teachers directly</title>
 </head>
 <body>
-  <?php session_start(); ?>
+  <?php 
+  session_start(); 
+  date_default_timezone_set("Asia/Kolkata");
+  ?>
   <header class="navbar">
     <div class="container">
       <a id="logo" onclick="toHome()">Edu<span>Connect</span></a>

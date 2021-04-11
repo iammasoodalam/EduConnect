@@ -37,6 +37,10 @@ nav {
   text-align: center;
   border-radius: 0.250em;
   z-index: 999;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 nav .primary-nav li:last-child {
@@ -57,6 +61,10 @@ nav .login-cta {
   cursor: pointer;
   -webkit-transition: all 0.3s linear;
   transition: all 0.3s linear;
+}
+
+nav .login-cta:hover {
+  color: #43C12B;
 }
 
 nav .login-cta .open {
@@ -738,6 +746,57 @@ nav .login-option li:last-child {
   margin: 1rem;
 }
 
+#profile #profile-data {
+  padding: 1rem;
+  -webkit-box-shadow: -4px -4px 16px 0px #fff, 4px 4px 16px 0px #555555;
+          box-shadow: -4px -4px 16px 0px #fff, 4px 4px 16px 0px #555555;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 1rem;
+}
+
+#profile #profile-data .profileImage {
+  margin-bottom: 1rem;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 100px;
+  height: 100px;
+  background-size: cover;
+  border-radius: 50%;
+  -webkit-box-shadow: -2px -2px 8px 0px #fff, 2px 2px 8px 0px #555555;
+          box-shadow: -2px -2px 8px 0px #fff, 2px 2px 8px 0px #555555;
+}
+
+#profile #profile-data .profile-data {
+  list-style-type: none;
+}
+
+#profile #profile-data .profile-data li {
+  margin-top: 0.25rem;
+}
+
+#profile #profile-data .profile-data li > b {
+  color: #126590;
+  padding-left: 0.5rem;
+  border-left: 0.25rem solid #126590;
+}
+
+#profile #profile-data .profile-data li > div {
+  color: #555555;
+  padding: 0.25rem;
+  border-radius: 4px;
+  background-color: #fff;
+  -webkit-box-shadow: 4px 4px 8px rgba(85, 85, 85, 0.3), -4px -4px 8px #fff;
+          box-shadow: 4px 4px 8px rgba(85, 85, 85, 0.3), -4px -4px 8px #fff;
+  margin-top: 0.25rem;
+}
+
 #schedule-section {
   position: relative;
 }
@@ -781,6 +840,15 @@ nav .login-option li:last-child {
 
 #schedule-section #time-table .period .subject .professor-name {
   color: #d5ff89;
+}
+
+#schedule-section #time-table .holiday {
+  background: #1C8D73;
+  padding: 1rem;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bolder;
+  border-radius: 0.5rem;
 }
 
 #schedule-section #time-table button {
@@ -1004,11 +1072,73 @@ footer .fa-facebook {
     margin-left: 1rem;
     text-align: left;
   }
+  #profile {
+    margin: 2rem;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  #schedule-section {
+    background-color: rgba(85, 85, 85, 0.4);
+    padding: 1rem;
+    border-radius: 0.5rem;
+  }
+  #schedule-section h2 {
+    margin-bottom: 1rem;
+  }
+  #schedule-section #time-table {
+    padding: 0rem;
+  }
+  #schedule-section #time-table button {
+    display: none;
+  }
+  #schedule-section #time-table .period {
+    display: -ms-grid;
+    display: grid;
+    margin: 1rem 0rem;
+  }
+  .profile-data {
+    font-size: 1.2rem;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
   .uploader {
     margin: 1rem 10rem;
+  }
+  #profile {
+    margin: 2rem;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 3.5fr 8.5fr;
+        grid-template-columns: 3.5fr 8.5fr;
+    gap: 1rem;
+  }
+  #schedule-section {
+    background-color: rgba(85, 85, 85, 0.4);
+    padding: 1rem;
+    border-radius: 0.5rem;
+  }
+  #schedule-section h2 {
+    margin-bottom: 1rem;
+  }
+  #schedule-section #time-table {
+    padding: 0rem;
+  }
+  #schedule-section #time-table button {
+    display: none;
+  }
+  #schedule-section #time-table .period {
+    display: -ms-grid;
+    display: grid;
+    margin: 1rem 0rem;
+  }
+  .profile-data {
+    font-size: 1.2rem;
+    margin: 0rem auto;
+    width: 30rem;
   }
 }
 
