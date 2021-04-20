@@ -1,5 +1,5 @@
 <?php require_once "./includes/header.inc.php";
-if (empty($_SESSION)) {
+if (empty($_SESSION) || $_SESSION['userType'] == 'admin') {
   header("Location: index.php");
   exit();
 }

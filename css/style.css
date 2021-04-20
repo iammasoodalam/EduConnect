@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -96,7 +96,7 @@ nav .login-option li:last-child {
 }
 
 .container a {
-  font-weight: 900;
+  font-weight: 500;
   font-size: 1.5rem;
   text-decoration: none;
   cursor: pointer;
@@ -213,7 +213,7 @@ nav .login-option li:last-child {
   background-color: rgba(85, 85, 85, 0.5);
   padding: 0.5rem 1rem;
   border-radius: 0.5rem 0.5rem 0 0;
-  font-weight: bold;
+  font-weight: 400;
   color: #8D3DAF;
 }
 
@@ -249,7 +249,7 @@ nav .login-option li:last-child {
   cursor: pointer;
   font-size: 1.2rem;
   text-align: center;
-  font-weight: bold;
+  font-weight: 400;
 }
 
 .homepage .assignment .details button {
@@ -277,7 +277,7 @@ nav .login-option li:last-child {
   background-color: rgba(85, 85, 85, 0.5);
   padding: 0.5rem 1rem;
   border-radius: 0.5rem 0.5rem 0 0;
-  font-weight: bold;
+  font-weight: 400;
   color: #8D3DAF;
 }
 
@@ -466,7 +466,7 @@ nav .login-option li:last-child {
   text-align: center;
   border-radius: 0.25rem;
   color: white;
-  font-weight: bold;
+  font-weight: 400;
   cursor: pointer;
   background-color: #dd0404;
 }
@@ -486,7 +486,7 @@ nav .login-option li:last-child {
 }
 
 #schedule #schedule-result td:first-child, #schedule #schedule-result th:first-child {
-  font-weight: bold;
+  font-weight: 400;
 }
 
 #schedule #schedule-result td:not(:first-child), #schedule #schedule-result th:not(:first-child) {
@@ -632,7 +632,7 @@ nav .login-option li:last-child {
 
 #contact .contact-links div.links span {
   color: #8D3DAF;
-  font-weight: bold;
+  font-weight: 400;
 }
 
 #login {
@@ -656,7 +656,7 @@ nav .login-option li:last-child {
 #login > div .heading {
   text-align: center;
   font-size: 2rem;
-  font-weight: bold;
+  font-weight: 400;
   color: #fff;
 }
 
@@ -835,7 +835,7 @@ nav .login-option li:last-child {
 #schedule-section #time-table .period .subject-name {
   color: #23C4ED;
   font-size: 1rem;
-  font-weight: bold;
+  font-weight: 400;
 }
 
 #schedule-section #time-table .period .subject .professor-name {
@@ -847,7 +847,7 @@ nav .login-option li:last-child {
   padding: 1rem;
   text-align: center;
   font-size: 2rem;
-  font-weight: bolder;
+  font-weight: 500;
   border-radius: 0.5rem;
 }
 
@@ -862,7 +862,7 @@ nav .login-option li:last-child {
   font-family: poppins, sans-serif;
   -webkit-transform: translateY(50%);
           transform: translateY(50%);
-  font-weight: bold;
+  font-weight: 400;
   background-color: #1C8D73;
   color: white;
   -webkit-user-select: none;
@@ -918,6 +918,136 @@ footer .fa-facebook {
   color: #207398;
 }
 
+#upload {
+  margin: 1rem;
+}
+
+#upload #upload-form {
+  -webkit-box-shadow: -4px -4px 16px 0px #fff, 4px 4px 16px 0px #555555;
+          box-shadow: -4px -4px 16px 0px #fff, 4px 4px 16px 0px #555555;
+  border-radius: 1rem;
+}
+
+#upload #upload-form h2 {
+  text-align: center;
+}
+
+#upload #upload-form .error {
+  background-color: rgba(226, 0, 0, 0.39);
+  border-radius: 0.25rem;
+  margin: 1rem;
+  padding: 0.5rem;
+  position: relative;
+}
+
+#upload #upload-form .error span {
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+  background-color: black;
+  color: white;
+  width: 1rem;
+  height: 1rem;
+  text-align: center;
+  line-height: 1rem;
+  border-radius: 0.125rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+#upload #upload-form .success {
+  background-color: rgba(38, 226, 0, 0.39);
+  border-radius: 0.25rem;
+  margin: 1rem;
+  padding: 0.5rem;
+  position: relative;
+}
+
+#upload #upload-form .success span {
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+  background-color: black;
+  color: white;
+  width: 1rem;
+  height: 1rem;
+  text-align: center;
+  line-height: 1rem;
+  border-radius: 0.125rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+#upload #upload-form form {
+  padding: 0 1rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#upload #upload-form form label, #upload #upload-form form input, #upload #upload-form form select, #upload #upload-form form textarea {
+  width: 100%;
+  padding: 0.25rem;
+  font-family: poppins;
+  border-radius: 0.250rem;
+  outline: none;
+}
+
+#upload #upload-form form input, #upload #upload-form form select, #upload #upload-form form textarea {
+  border: 1px solid #555555;
+  margin-bottom: 0.5rem;
+}
+
+#upload #upload-form form input:focus, #upload #upload-form form select:focus, #upload #upload-form form textarea:focus {
+  -webkit-box-shadow: 0px 0px 5px 0px #555555;
+          box-shadow: 0px 0px 5px 0px #555555;
+}
+
+#upload #upload-form form textarea {
+  resize: none;
+}
+
+#upload #upload-form form input[type="submit"] {
+  background-color: #6EC72D;
+  color: #fff;
+  border: 1px solid #555555;
+  cursor: pointer;
+}
+
+#upload #upload-form form #txtFormatUrl {
+  width: initial;
+}
+
+#upload #upload-form form #sampleeditor {
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  min-height: 200px;
+  background-color: #fff;
+  list-style-position: inside;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+#upload #upload-form form .sample-toolbar {
+  border: 1px solid #ddd;
+  background: #f2f2f2;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+#upload #upload-form form .sample-toolbar > span {
+  cursor: pointer;
+}
+
+#upload #upload-form form .sample-toolbar > span:hover {
+  text-decoration: underline;
+}
+
 @media only screen and (min-width: 768px) {
   .container {
     display: -ms-grid;
@@ -969,8 +1099,8 @@ footer .fa-facebook {
   .homepage {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 50% 40% auto;
-        grid-template-columns: 50% 40% auto;
+    -ms-grid-columns: 50% 50%;
+        grid-template-columns: 50% 50%;
   }
   .homepage .circle {
     margin-top: 50vh;
@@ -978,6 +1108,9 @@ footer .fa-facebook {
             transform: translateY(-50%);
     width: 25rem;
     height: 25rem;
+  }
+  .homepage .contents {
+    padding: 0rem 5rem;
   }
   .uploader {
     display: -webkit-box;
@@ -1047,7 +1180,7 @@ footer .fa-facebook {
   }
   #schedule #periods .periods {
     text-align: center;
-    font-weight: bold;
+    font-weight: 400;
     font-size: 1.2rem;
   }
   #schedule .upload-type {
@@ -1072,7 +1205,7 @@ footer .fa-facebook {
     margin-left: 1rem;
     text-align: left;
   }
-  #profile {
+  #profile, #upload {
     margin: 2rem;
     display: -ms-grid;
     display: grid;
@@ -1102,13 +1235,16 @@ footer .fa-facebook {
   .profile-data {
     font-size: 1.2rem;
   }
+  #upload-form {
+    padding: 1rem 5rem;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
   .uploader {
     margin: 1rem 10rem;
   }
-  #profile {
+  #profile, #upload {
     margin: 2rem;
     display: -ms-grid;
     display: grid;

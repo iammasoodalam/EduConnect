@@ -36,6 +36,9 @@ $(function(){
   toProfile = () => {
     location.href = "./profile.php";
   }
+  toUpload = () => {
+    location.href = "./upload.php";
+  }
 
   //Input for Student/professor or schedule-------//////////////////////////////////////////
   $("#nav-pro").on("click", function(){
@@ -245,6 +248,17 @@ $(function(){
     }
     else{
       $(".period").css("display", "grid");
+    }
+  })
+  // Upload -------------------- /////////
+  $("#sampleeditor").on("keyup", function(){
+    $("#detailInfo").val($(this).html());
+  })
+  $("#uploadType").on("change", function() {
+    if($(this).val() === 'assignment'){
+      $(".submission").show();
+    } else {
+      $(".submission").hide();
     }
   })
 });

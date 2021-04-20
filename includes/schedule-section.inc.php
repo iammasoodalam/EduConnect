@@ -68,6 +68,16 @@
 
             }
           }
+        } else if($_SESSION['userType'] == 'professor'){
+          ?>
+          <div class="period">
+            <div class="time">Not <br>Scheduled</div>
+            <div class="subject">
+              <h3>Not Scheduled</h3>
+              <div class="subject-name">Not Scheduled</div>
+            </div>
+          </div>
+          <?php
         }
       }
       else{
