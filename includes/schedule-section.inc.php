@@ -71,7 +71,7 @@
         } else if($_SESSION['userType'] == 'professor'){
           ?>
           <div class="period">
-            <div class="time">Not <br>Scheduled</div>
+            <div class="time">08:00<br>|<br>08:50</div>
             <div class="subject">
               <h3>Not Scheduled</h3>
               <div class="subject-name">Not Scheduled</div>
