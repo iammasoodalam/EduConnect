@@ -1,10 +1,10 @@
 <?php
 if(!isset($_POST['submit'])){
   header("location: ../upload.php");
-  echo "not working";
 }
 session_start();
 include "connection.inc.php";
+date_default_timezone_set("Asia/Kolkata");
 
 $uploadType = $_POST['uploadType'];
 $branch = $_POST['branch'];

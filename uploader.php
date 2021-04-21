@@ -23,6 +23,7 @@ if($_SESSION['userType'] != 'admin'){
   <div class="form">
     <h2>Student form</h2>
     <form action="includes/newStudent.php" method="POST" class="studentForm">
+      <input type="reset" value="Reset Form">
       <label for="enrollment">Enrollment number</label>
       <input type="text" name="enrollment" id="enrollment" placeholder="AB1234" required>
       <label for="faculty">Faculty number</label>

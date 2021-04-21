@@ -39,13 +39,13 @@
           if($_SESSION['userType'] == "professor"){
             ?>
             <ul class="primary-nav">
-              <li onclick="toHome()">Home</li><li onclick="toUpload()">Upload</li><li>Assingnemt</li><li>Search</li><li onclick="toProfile()">Profile</li>
+              <li onclick="toHome()">Home</li><li onclick="toUpload()">Upload</li><li onclick="toSearch()">Search</li><li onclick="toProfile()">Profile</li>
             </ul>
             <?php
           } else if($_SESSION['userType'] == "student"){
             ?>
             <ul class="primary-nav">
-              <li onclick="toHome()">Home</li><li>Lecture Notes</li><li>Assingnemt</li><li onclick="toProfile()">Profile</li>
+              <li onclick="toHome()">Home</li><li onclick="toSearch()">Search</li><li onclick="toProfile()">Profile</li>
             </ul>
             <?php
           } else{

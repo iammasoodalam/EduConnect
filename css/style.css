@@ -1048,6 +1048,52 @@ footer .fa-facebook {
   text-decoration: underline;
 }
 
+#search {
+  margin: 1rem;
+}
+
+#search-professor, #search-student {
+  -webkit-box-shadow: -4px -4px 16px 0px #fff, 4px 4px 16px 0px #555555;
+          box-shadow: -4px -4px 16px 0px #fff, 4px 4px 16px 0px #555555;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+#search-professor h2, #search-student h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+#search-professor #searchResult, #search-student #searchResult {
+  overflow-x: scroll;
+}
+
+#search-professor td, #search-student td {
+  padding: 0.25rem 0.5rem;
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
+  border-bottom: 2px solid #43C12B;
+}
+
+#search label, #search input, #search select {
+  width: 100%;
+  padding: 0.25rem 0.5rem;
+  font-family: poppins;
+  border-radius: 0.250rem;
+  outline: none;
+}
+
+#search input, #search select {
+  border: 1px solid #555555;
+  margin-bottom: 0.5rem;
+}
+
+#search input:focus, #search select:focus {
+  -webkit-box-shadow: 0px 0px 5px 0px #555555;
+          box-shadow: 0px 0px 5px 0px #555555;
+}
+
 @media only screen and (min-width: 768px) {
   .container {
     display: -ms-grid;
@@ -1244,7 +1290,7 @@ footer .fa-facebook {
   .uploader {
     margin: 1rem 10rem;
   }
-  #profile, #upload {
+  #profile, #upload, #search {
     margin: 2rem;
     display: -ms-grid;
     display: grid;

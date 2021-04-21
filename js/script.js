@@ -39,6 +39,9 @@ $(function(){
   toUpload = () => {
     location.href = "./upload.php";
   }
+  toSearch = () => {
+    location.href = "./search.php";
+  }
 
   //Input for Student/professor or schedule-------//////////////////////////////////////////
   $("#nav-pro").on("click", function(){
@@ -260,6 +263,23 @@ $(function(){
     } else {
       $(".submission").hide();
     }
+  })
+  // Search -------------------- /////////
+  $("#searchInput").on("keyup", function() {
+    var data = {},
+        searchBy = document.documentElement.contains(document.getElementById("searchBy"));
+    if(searchBy){
+      data['searchBy'] = $("#searchBy").val();
+    }
+    data['searchInput'] = $("#searchInput").val();
+    $.ajax({
+      url: "./includes/search.inc.php",
+      type: "GET",
+      data: data,
+      success: function(response) {
+        $("#searchResult").html(response);
+      }
+    })
   })
 });
 
