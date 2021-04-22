@@ -253,6 +253,16 @@ $(function(){
       $(".period").css("display", "grid");
     }
   })
+  $(".read-more").on("click", function() {
+    var cardData = this.previousElementSibling;
+    if($(cardData).height() == 72){
+      $(cardData).height("auto");
+      $(this).html("Collapse <i class='fas fa-caret-up'>")
+    } else {
+      $(cardData).height(72);
+      $(this).html('Read More <i class="fas fa-caret-down">');
+    }
+  })
   // Upload -------------------- /////////
   $("#sampleeditor").on("keyup", function(){
     $("#detailInfo").val($(this).html());
@@ -282,5 +292,3 @@ $(function(){
     })
   })
 });
-
-

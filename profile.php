@@ -38,7 +38,7 @@ if ($_SESSION['userType'] == 'student'){
         <li><b>Email Id: </b><div><?= $_SESSION['emailId'] ?></div></li>
         <li><b>Date of Birth: </b><div><?= $_SESSION['dateOfBirth'] ?></div></li>
         <li><b>Address: </b><div><?= $_SESSION['address'] ?></div></li>
-        <li><b>Join date: </b><div><?= $_SESSION['joindate'] ?></div></li>
+        <li><b>Join date: </b><div><?= $_SESSION['joinDate'] ?></div></li>
         <li><b>Branch: </b><div><?= $_SESSION['branchName'] ?></div></li>
         <li><b>Semester: </b><div><?= $_SESSION['semester'] ?></div></li>
       <?php } else { ?>

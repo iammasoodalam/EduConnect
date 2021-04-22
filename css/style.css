@@ -11,7 +11,7 @@ html {
 }
 
 body {
-  background: #f2f2f2;
+  background: #f3f3f3;
   font-family: poppins;
   font-weight: 300;
 }
@@ -742,6 +742,66 @@ nav .login-option li:last-child {
   margin: 1rem;
 }
 
+#home-professor, #home-student {
+  -webkit-box-shadow: -4px -4px 16px 0px #fff, 4px 4px 16px 0px #555555;
+          box-shadow: -4px -4px 16px 0px #fff, 4px 4px 16px 0px #555555;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+#home-professor h2, #home-student h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+#home .card {
+  background-color: rgba(85, 85, 85, 0.5);
+  padding: 0.5rem;
+  margin: 0.5rem;
+  border-radius: .5rem;
+  position: relative;
+  overflow: auto;
+}
+
+#home .card ol, #home .card ul {
+  list-style-position: inside;
+}
+
+#home .card-head {
+  position: relative;
+  background-color: #1C8D73;
+  height: 2.5rem;
+  border-radius: 0.5rem;
+}
+
+#home .card-head .provided {
+  position: absolute;
+  left: 0.5rem;
+  top: 0.5rem;
+  color: white;
+}
+
+#home .card-head .submission {
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+  color: white;
+}
+
+#home .card .card-data {
+  height: 4.5rem;
+  overflow: hidden;
+}
+
+#home .card .read-more {
+  float: right;
+  cursor: pointer;
+}
+
+#home .card .read-more:hover {
+  color: #fff;
+}
+
 #profile {
   margin: 1rem;
 }
@@ -1035,7 +1095,7 @@ footer .fa-facebook {
 
 #upload #upload-form form .sample-toolbar {
   border: 1px solid #ddd;
-  background: #f2f2f2;
+  background: #f3f3f3;
   padding: 5px;
   border-radius: 3px;
 }
@@ -1251,7 +1311,7 @@ footer .fa-facebook {
     margin-left: 1rem;
     text-align: left;
   }
-  #profile, #upload {
+  #profile, #upload, #search, #home {
     margin: 2rem;
     display: -ms-grid;
     display: grid;
@@ -1290,7 +1350,7 @@ footer .fa-facebook {
   .uploader {
     margin: 1rem 10rem;
   }
-  #profile, #upload, #search {
+  #profile, #upload, #search, #home {
     margin: 2rem;
     display: -ms-grid;
     display: grid;

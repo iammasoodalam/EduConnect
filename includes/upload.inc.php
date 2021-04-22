@@ -46,7 +46,8 @@ if($uploadType === 'assignment'){
   }
   else{
     // If file is not available
-    $stmt->bind_param("ssssssi", $course, $title, $detailInfo, $today, $submission, $professorId, null);
+    $file = null;
+    $stmt->bind_param("ssssssi", $course, $title, $detailInfo, $today, $submission, $professorId, $file);
     if($stmt->execute()){
       header("Location: ../upload.php?success=assignmentUpload");
     }
@@ -69,7 +70,8 @@ else if($uploadType === 'notes'){
   }
   else{
     // If file is not available
-    $stmt->bind_param("sssssi", $course, $title, $detailInfo, $today, $professorId, null);
+    $file = null;
+    $stmt->bind_param("sssssi", $course, $title, $detailInfo, $today, $professorId, $file);
     if($stmt->execute()){
       header("Location: ../upload.php?success=notesUpload");
     }
