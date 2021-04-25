@@ -16,7 +16,11 @@ body {
   font-weight: 300;
 }
 
-input:focus, textarea:focus {
+input, textarea, select, option {
+  font-weight: 300;
+}
+
+input:focus, textarea:focus, select:focus, option:focus {
   outline: none;
 }
 
@@ -1295,6 +1299,18 @@ footer .fa-facebook {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
     grid-gap: 1rem;
+  }
+  #schedule .upload-for {
+    display: -ms-grid;
+    display: grid;
+    place-content: center;
+  }
+  #schedule .upload-for label, #schedule .upload-for select {
+    width: 480px;
+  }
+  #schedule .upload-for .even-odd {
+    display: -ms-grid;
+    display: grid;
   }
   #contact {
     margin: 1rem 10rem;

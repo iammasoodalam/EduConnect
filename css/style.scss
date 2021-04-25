@@ -25,7 +25,8 @@ body{
   font-family: poppins;
   font-weight: 300;
 }
-input, textarea{
+input, textarea, select, option{
+  font-weight: 300;
   &:focus{
     outline: none;
   }
@@ -1100,6 +1101,16 @@ footer{
       display: grid;
       grid-template-columns: 1fr 1fr;
       grid-gap: 1rem;
+    }
+    .upload-for{
+      display: grid;
+      place-content: center;
+      label, select{
+        width: 480px;
+      }
+      .even-odd{
+        display: grid;
+      }
     }
   }
   #contact{

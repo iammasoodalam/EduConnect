@@ -105,6 +105,23 @@ $(function(){
   formResult($("form.professorForm"), $("#resultProfessor"));
 
   //Schedule insertion ----------------//////////////////////////////////
+  $("#upload-for").on("change", function () {
+    if($("#upload-for").val() == "student"){
+      $("#branch-semester").show(100);
+      $(".even-odd").hide(100);
+    }
+    else{
+      $("#branch-semester").hide(100);
+      $(".even-odd").show(100);
+      $.ajax({
+        url: "includes/getProfessor.inc.php",
+        type: "POST",
+        success: function (response) {
+          $("#proschedule").html(response)
+        }
+      })
+    }
+  })
   $("#getSubjects").on("click", function(){
     var semester = $("#chooseSemester"),
         branch = $("#chooseBranch");
@@ -121,6 +138,18 @@ $(function(){
       }
     })
   });
+  $("#even-odd").on("change", function() {
+    var data = {};
+    data['even-odd'] = $(this).val();
+    $.ajax({
+      method: "POST",
+      url: "includes/getSubjectsPro.inc.php",
+      data: data,
+      success: (response) =>{
+        $(".period-value").html(response);
+      }
+    })
+  })
 
   $("form#schedule-uploader").on("submit", function () {
     var that = $(this),
@@ -140,6 +169,7 @@ $(function(){
       success: function(response){
         $("#schedule-result").html(response);
         $("#schedule-result").slideDown(300);
+        console.log(response);
       }
     });
     $('html, body').animate({ scrollTop: 0 }, 100);

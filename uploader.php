@@ -123,6 +123,25 @@ if($_SESSION['userType'] != 'admin'){
     <li>And finally click on Upload button.</li>
   </ul>
   <form action="includes/schedule.inc.php" method="post" class="form" id="schedule-uploader">
+    <div class="upload-for">
+      <label for="upload-for">Upload Schedule for:</label>
+      <select name="upload-for" id="upload-for">
+        <option value="student">Student</option>
+        <option value="professor">Professor</option>
+      </select>
+      <div class="even-odd" style="display: none;">
+        <label for="proschedule">Professor Id</label>
+        <select name="proschedule" id="proschedule">
+          <option value="">Select professor</option>
+        </select>
+        <label for="even-odd">Semester</label>
+        <select name="even-odd" id="even-odd">
+          <option value="">Select Semester</option>
+          <option value="1">Odd Semester</option>
+          <option value="0">Even Semester</option>
+        </select>
+      </div>
+    </div>
     <div id="branch-semester">
       <div class="branch" class="branch-semester">
         <label for="chooseBranch">Branch</label>
