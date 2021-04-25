@@ -152,6 +152,12 @@ if($_SESSION['userType'] == "admin"){
                 </div>
                 <?php
               }
+            } else{
+              ?>
+              <div class="card">
+                <h3>Not assingned any assignments</h3>
+              </div>
+              <?php
             }
           }
           
@@ -197,6 +203,12 @@ if($_SESSION['userType'] == "admin"){
                 </div>
                 <?php
               }
+            } else{
+              ?>
+              <div class="card">
+                <h3>Not uploaded any lecture notes</h3>
+              </div>
+              <?php
             }
           }
           
