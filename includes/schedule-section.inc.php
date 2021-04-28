@@ -4,7 +4,7 @@
       <button id="previous" onclick="plusSlides(-1)"><</button>
       <button id="next" onclick="plusSlides(1)">></button>
       <?php
-      $day = 3;//date('w');
+      $day = date('w');
       if($day > 0 && $day < 7){
         if($_SESSION['userType'] == "student"){
           $scheduleQuery = "SELECT * FROM `schedule` WHERE `branchId` = $_SESSION[branch] AND `semesterId` = $_SESSION[semester] AND `day` = $day";

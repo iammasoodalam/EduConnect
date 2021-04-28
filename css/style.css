@@ -34,7 +34,7 @@ nav {
   display: none;
   position: fixed;
   top: 4rem;
-  background-color: #207398;
+  background-color: #3791bb;
   color: #fff;
   right: 1.25em;
   left: 1.25em;
@@ -45,10 +45,6 @@ nav {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-}
-
-nav .primary-nav li:last-child {
-  padding-bottom: 0.5rem;
 }
 
 nav ul {
@@ -407,7 +403,7 @@ nav .login-option li:last-child {
 }
 
 .uploader .form-instruction ul li strong {
-  color: #207398;
+  color: #3791bb;
 }
 
 .uploader .form {
@@ -515,7 +511,7 @@ nav .login-option li:last-child {
 
 #schedule .schedule-instruction li::before {
   content: '#';
-  color: #207398;
+  color: #3791bb;
   margin-right: 0.5rem;
 }
 
@@ -612,6 +608,7 @@ nav .login-option li:last-child {
   background-color: #43C12B;
   color: #fff;
   font-size: 1rem;
+  cursor: pointer;
 }
 
 #contact .contact-links {
@@ -979,7 +976,7 @@ footer .fa-instagram {
 }
 
 footer .fa-facebook {
-  color: #207398;
+  color: #3791bb;
 }
 
 #upload {
@@ -1184,6 +1181,15 @@ footer .fa-facebook {
     background: unset;
     color: #555555;
   }
+  .container nav .login-cta {
+    padding: 0.5rem 1rem;
+    background-color: #3791bb;
+    color: white;
+    border-radius: 1rem;
+  }
+  .container nav .login-cta:hover {
+    background-color: #126590;
+  }
   .container nav .primary-nav {
     display: inline;
     justify-self: flex-end;
@@ -1191,12 +1197,30 @@ footer .fa-facebook {
   }
   .container nav .primary-nav li {
     display: inline-block;
+    position: relative;
   }
   .container nav .primary-nav li:not(:first-child) {
     margin-left: 1rem;
   }
   .container nav .primary-nav li:hover {
     color: #6EC72D;
+  }
+  .container nav .primary-nav li:hover::after {
+    opacity: 1;
+  }
+  .container nav .primary-nav li::after {
+    content: "";
+    background: #43C12B;
+    width: 100%;
+    height: 0.25rem;
+    position: absolute;
+    bottom: -1rem;
+    left: 0;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    opacity: 0;
+    -webkit-transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
   }
   .container nav .login-option {
     color: white;

@@ -5,7 +5,7 @@
     <a href="#">about</a> &bull;
     <a href="#">support</a> &bull;
     <a href="javascript:void(0)" onclick="toContact()">contact</a><br>
-    <a href="#">Terms &amp; conditions</a> &bull;
+    <a href="javascript:void(0)">Terms &amp; conditions</a> &bull;
     <a href="#">Privacy policy</a><br>
     <p>&copy 2020 &bull; iammasoodalam.com</p>
   </footer>
