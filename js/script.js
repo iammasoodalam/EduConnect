@@ -30,6 +30,12 @@ $(function(){
   toHome = () => {
     location.href = "./home.php";
   }
+  toAssignment = () => {
+    location.href = "./assignment.php"
+  }
+  toLectureNotes = () => {
+    location.href = "./lecture.php"
+  }
   logout = () => {
     location.href = "./includes/logout.inc.php";
   }
@@ -270,6 +276,7 @@ $(function(){
       $(this).html('Read More <i class="fas fa-caret-down">');
     }
   })
+  $(".card").has(".submission").css({"background": "#46525fb9", "color": "white"});
   // Upload -------------------- /////////
   $("#sampleeditor").on("keyup", function(){
     $("#detailInfo").val($(this).html());

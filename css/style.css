@@ -11,7 +11,7 @@ html {
 }
 
 body {
-  background: #f3f3f3;
+  background: #49626852;
   font-family: poppins;
   font-weight: 300;
 }
@@ -757,7 +757,7 @@ nav .login-option li:last-child {
 
 #home .card {
   background-color: rgba(85, 85, 85, 0.5);
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
   margin: 0.5rem;
   border-radius: .5rem;
   position: relative;
@@ -768,10 +768,16 @@ nav .login-option li:last-child {
   list-style-position: inside;
 }
 
+#home .card .welcome {
+  text-align: right;
+  color: #fff;
+}
+
 #home .card-head {
   position: relative;
   background-color: #1C8D73;
   height: 2.5rem;
+  margin: 0rem -0.5rem;
   border-radius: 0.5rem;
 }
 
@@ -851,10 +857,12 @@ nav .login-option li:last-child {
 #profile #profile-data .profile-data li > div {
   color: #555555;
   padding: 0.25rem;
+  border: 1px solid rgba(85, 85, 85, 0.6);
   border-radius: 4px;
-  background-color: #fff;
-  -webkit-box-shadow: 4px 4px 8px rgba(85, 85, 85, 0.3), -4px -4px 8px #fff;
-          box-shadow: 4px 4px 8px rgba(85, 85, 85, 0.3), -4px -4px 8px #fff;
+  background-color: #f3f3f3;
+  color: #1C8D73;
+  font-weight: 400;
+  padding-left: 0.75rem;
   margin-top: 0.25rem;
 }
 
