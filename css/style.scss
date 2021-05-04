@@ -674,6 +674,16 @@ nav{
       height: 4.5rem;
       overflow: hidden;
     }
+    #attachment{
+      display: block;
+      margin-top: 0.25rem;
+      border-radius: 0.25rem;
+      width: 7.5rem;
+      padding: 0.25rem;
+      background-color: rgb(112, 206, 206);
+      text-decoration: none;
+      color: $darkGrey;
+    }
     .read-more{
       float: right;
       cursor: pointer;

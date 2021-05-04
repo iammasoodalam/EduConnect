@@ -72,7 +72,7 @@ if($_SESSION['userType'] == "admin"){
                 }
               }
               ?> <hr>
-              <a href="./asset/attachments/<?= $fileName ?>">Attachment</a> 
+              <a href="./asset/attachments/<?= $fileName ?>" id="attachment"><i class="fas fa-file"></i>  Attachment</a> 
               <?php
             }
             ?>
@@ -145,7 +145,7 @@ if($_SESSION['userType'] == "admin"){
             }
             ?>
             <hr>
-            <a href="./asset/attachments/<?= $fileName ?>">Attachment</a>
+            <a href="./asset/attachments/<?= $fileName ?>" id="attachment"><i class="fas fa-file"></i>  Attachment</a>
             <?php
           }
           ?>

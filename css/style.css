@@ -800,6 +800,17 @@ nav .login-option li:last-child {
   overflow: hidden;
 }
 
+#home .card #attachment {
+  display: block;
+  margin-top: 0.25rem;
+  border-radius: 0.25rem;
+  width: 7.5rem;
+  padding: 0.25rem;
+  background-color: #70cece;
+  text-decoration: none;
+  color: #242B2E;
+}
+
 #home .card .read-more {
   float: right;
   cursor: pointer;
