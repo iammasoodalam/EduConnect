@@ -6,7 +6,8 @@ This website is my major project as a student of Diploma in Computer engineering
 2. Create a database named **educonnect**
 3. Or you can use any empty database and rename the database name in the *includes/connection.inc.php* file.
 4. Then import database provided in the *sql* folder.
-5. Use id = *12345* and password = *zahid*, in Admin section to create user of your own.
+5. Delete assignments and lecture notes uploaded in the database, because it will create an error due unavailability of attachments. (*I'm not uploading attachments to github*)
+6. Use id = *12345* and password = *zahid*, in Admin section to create user of your own.
 
 And there you go you have completed the setup.
 Now you can run this application by starting your **php** and **MySQL** server.
