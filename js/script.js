@@ -10,12 +10,13 @@ $(function(){
   hamburger.on("click", function(){
     nav.slideToggle();
     hamburger.toggleClass("nav-open");
+
     if(hamburger.hasClass("nav-open")){
       overlay.style.visibility = "visible";
       overlay.style.opacity = 1;
     } else{
       overlay.style.visibility = "hidden";
-      overlay.style.opacity = 1;
+      overlay.style.opacity = 0;
     }
   });
   $(".login-cta").on("click", function(){
@@ -28,7 +29,7 @@ $(function(){
     $(".login-option").slideUp();
     $(".fa-caret-down").removeClass("open");
     overlay.style.visibility = "hidden";
-    overlay.style.opacity = 1;
+    overlay.style.opacity = 0;
   })
   $("main").on("click", () => {
     nav.slideUp();
@@ -36,7 +37,7 @@ $(function(){
     $(".login-option").slideUp();
     $(".fa-caret-down").removeClass("open");
     overlay.style.visibility = "hidden";
-    overlay.style.opacity = 1;
+    overlay.style.opacity = 0;
   })
 
   toAdmin = () => {
