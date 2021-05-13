@@ -32,11 +32,28 @@ input, textarea, select, option{
     outline: none;
   }
 }
+button, input[type='button'], input[type='submit']{
+  user-select: none;
+  &:active{
+    box-shadow: 0 0 0.25em white !important;
+  }
+}
 .navbar{
   background-color: $white;
   box-shadow: 0em 0.125em 0.5em 0em $grey;
 }
-
+.overlay{
+  background-color: #b3aecf70;
+  backdrop-filter: blur(4px);
+  z-index: 10;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 3.375rem;
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
+}
 nav{
   display: none;
   position: fixed;
@@ -1029,20 +1046,21 @@ footer{
             color: $lightGreen;
             &::after{
               opacity: 1;
+              height: 0.25rem;
             }
           }
           &::after{
             content: "";
             background: $green;
             width: 100%;
-            height: 0.25rem;
+            height: 0rem;
             position: absolute;
             bottom: -1rem;
             left: 0;
             border-top-left-radius: 0.25rem;
             border-top-right-radius: 0.25rem;
             opacity: 0;
-            transition: opacity 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
           }
         }
       }

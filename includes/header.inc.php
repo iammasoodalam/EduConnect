@@ -22,6 +22,7 @@
       <div class="hamburger">
         <span></span><span></span><span></span>
       </div>
+      <div class="overlay"></div>
       <nav>
         <?php
         if(empty($_SESSION)){

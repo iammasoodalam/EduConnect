@@ -4,16 +4,40 @@ $(function(){
       student = $("#student"), 
       professor = $("#professor"), 
       schedule = $("#schedule"), 
-      nav = $("nav");
+      nav = $("nav"),
+      overlay = document.querySelector(".overlay")
 
   hamburger.on("click", function(){
     nav.slideToggle();
     hamburger.toggleClass("nav-open");
+    if(hamburger.hasClass("nav-open")){
+      overlay.style.visibility = "visible";
+      overlay.style.opacity = 1;
+    } else{
+      overlay.style.visibility = "hidden";
+      overlay.style.opacity = 1;
+    }
   });
   $(".login-cta").on("click", function(){
     $(".login-option").slideToggle(300);
     $(".fa-caret-down").toggleClass("open");
   });
+  window.addEventListener("scroll", () => {
+    nav.slideUp(150);
+    hamburger.removeClass("nav-open");
+    $(".login-option").slideUp();
+    $(".fa-caret-down").removeClass("open");
+    overlay.style.visibility = "hidden";
+    overlay.style.opacity = 1;
+  })
+  $("main").on("click", () => {
+    nav.slideUp();
+    hamburger.removeClass("nav-open");
+    $(".login-option").slideUp();
+    $(".fa-caret-down").removeClass("open");
+    overlay.style.visibility = "hidden";
+    overlay.style.opacity = 1;
+  })
 
   toAdmin = () => {
     location.href = "./admin-login.php";
