@@ -1,4 +1,4 @@
-# WebPro
+# EduConnect
 This website is my major project as a student of Diploma in Computer engineering.
 
 ## To install this project into your server, follow: 
