@@ -73,6 +73,9 @@ $(function(){
   toSearch = () => {
     location.href = "./search.php";
   }
+  toAbout = () => {
+    location.href = "./about.php";
+  }
 
   //Input for Student/professor or schedule-------//////////////////////////////////////////
   $("#nav-pro").on("click", function(){
