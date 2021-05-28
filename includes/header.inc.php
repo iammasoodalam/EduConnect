@@ -28,7 +28,7 @@
         if(empty($_SESSION)){
           ?>
           <ul class="primary-nav">
-            <li onclick="toHome()">Home</li><li>About</li><li onclick="toContact()">Contact</li>
+            <li onclick="toHome()">Home</li><li onclick="toAbout()">About</li><li onclick="toContact()">Contact</li>
           </ul>
           <div class="login-cta">Login <i class="fas fa-caret-down"></i></div>
           <ul class="login-option">
