@@ -8,17 +8,16 @@ if ($evenOdd != "") {
   $stmt->bind_param("i", $evenOdd);
   $stmt->execute();
 
-  if($result = $stmt->get_result()){
+  if ($result = $stmt->get_result()) {
     if ($result->num_rows > 0) {
       echo "<option value=''>Select subject</option>";
       while ($row = $result->fetch_assoc()) {
         echo "<option value='" . $row["coursecode"] . "'>" . $row["coursecode"] . " - " . $row["coursename"] . "</option>";
       }
-    }
-    else{
+    } else {
       echo "<option value=''>No data found</option>";
     }
-  }else{
+  } else {
     echo "<option value=''>No data found</option>";
   }
 }

@@ -1,5 +1,5 @@
 <?php
-if(!isset($_POST['submit'])){
+if (!isset($_POST['submit'])) {
   header("location: ../upload.php");
 }
 session_start();
@@ -19,60 +19,57 @@ $file = 1;
 
 $uploadDir = '../asset/attachments/';
 
-if($uploadType == "" || $branch == "" || $semester == "" || $course == "" ||$title == ""){
+if ($uploadType == "" || $branch == "" || $semester == "" || $course == "" || $title == "") {
   header("Location: ../upload.php?error=emptyFields");
   exit();
 }
 
 
-if($uploadType === 'assignment'){
-  if($submission == ""){
+if ($uploadType === 'assignment') {
+  if ($submission == "") {
     header("Location: ../upload.php?error=emptySubmissionDate");
     exit;
   }
   $sql = "INSERT INTO `assignment`(`coursecode`, `title`, `data`, `provideddate`, `submissiondate`, `providedBy`, `attachment`) VALUES (?,?,?,?,?,?,?)";
   $stmt = $mysqli->prepare($sql);
 
-  if($_FILES['attachment']['error'] == '0'){
+  if ($_FILES['attachment']['error'] == '0') {
     // If file is available
     $stmt->bind_param("ssssssi", $course, $title, $detailInfo, $today, $submission, $professorId, $file);
-    if($stmt->execute()){
+    if ($stmt->execute()) {
       $lastID = $stmt->insert_id;
-      $targetFile = $uploadDir ."assignment" . $lastID . "." . strtolower(pathinfo($_FILES['attachment']['name'],PATHINFO_EXTENSION));
-      if(move_uploaded_file($_FILES['attachment']['tmp_name'], $targetFile)){
+      $targetFile = $uploadDir . "assignment" . $lastID . "." . strtolower(pathinfo($_FILES['attachment']['name'], PATHINFO_EXTENSION));
+      if (move_uploaded_file($_FILES['attachment']['tmp_name'], $targetFile)) {
         header("Location: ../upload.php?success=assignmentUpload");
       }
     }
-  }
-  else{
+  } else {
     // If file is not available
     $file = null;
     $stmt->bind_param("ssssssi", $course, $title, $detailInfo, $today, $submission, $professorId, $file);
-    if($stmt->execute()){
+    if ($stmt->execute()) {
       header("Location: ../upload.php?success=assignmentUpload");
     }
   }
-}
-else if($uploadType === 'notes'){
+} else if ($uploadType === 'notes') {
   $sql = "INSERT INTO `lecturenotes`(`coursecode`, `title`, `data`, `provideddate`,  `providedBy`, `attachment`) VALUES (?,?,?,?,?,?)";
   $stmt = $mysqli->prepare($sql);
 
-  if($_FILES['attachment']['error'] == '0'){
+  if ($_FILES['attachment']['error'] == '0') {
     // If file is available
     $stmt->bind_param("sssssi", $course, $title, $detailInfo, $today, $professorId, $file);
-    if($stmt->execute()){
+    if ($stmt->execute()) {
       $lastID = $stmt->insert_id;
-      $targetFile = $uploadDir . "lectureNote" . $lastID . "." . strtolower(pathinfo($_FILES['attachment']['name'],PATHINFO_EXTENSION));
-      if(move_uploaded_file($_FILES['attachment']['tmp_name'], $targetFile)){
+      $targetFile = $uploadDir . "lectureNote" . $lastID . "." . strtolower(pathinfo($_FILES['attachment']['name'], PATHINFO_EXTENSION));
+      if (move_uploaded_file($_FILES['attachment']['tmp_name'], $targetFile)) {
         header("Location: ../upload.php?success=notesUpload");
       }
     }
-  }
-  else{
+  } else {
     // If file is not available
     $file = null;
     $stmt->bind_param("sssssi", $course, $title, $detailInfo, $today, $professorId, $file);
-    if($stmt->execute()){
+    if ($stmt->execute()) {
       header("Location: ../upload.php?success=notesUpload");
     }
   }

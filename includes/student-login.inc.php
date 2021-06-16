@@ -1,7 +1,8 @@
 <?php
 require_once "./connection.inc.php";
 
-function test_input($data) {
+function test_input($data)
+{
   $data = trim($data);
   $data = stripslashes($data);
   $data = htmlspecialchars($data);
@@ -23,9 +24,9 @@ $stmt->execute();
 
 $result = $stmt->get_result();
 
-if($result->num_rows > 0){
+if ($result->num_rows > 0) {
   $row = $result->fetch_assoc();
-  if(password_verify($password, $row['password'])){
+  if (password_verify($password, $row['password'])) {
     session_start();
     $_SESSION['userType'] = "student";
     foreach ($row as $key => $value) {
@@ -34,7 +35,7 @@ if($result->num_rows > 0){
     $phoneStmt->execute();
     $phoneResult = $phoneStmt->get_result();
     $i = 1;
-    while($row = $phoneResult->fetch_assoc()){
+    while ($row = $phoneResult->fetch_assoc()) {
       $_SESSION['phone' . $i] = $row['phone'];
       $i++;
     }
@@ -44,7 +45,6 @@ if($result->num_rows > 0){
   } else {
     echo "Please check your password and try again";
   }
-}
-else{
+} else {
   echo "Please check your Enrollment Number and Password";
 }

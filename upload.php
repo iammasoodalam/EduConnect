@@ -3,7 +3,7 @@ if (empty($_SESSION)) {
   header("Location: index.php");
   exit();
 }
-if($_SESSION['userType'] == "admin" || $_SESSION['userType'] == 'student'){
+if ($_SESSION['userType'] == "admin" || $_SESSION['userType'] == 'student') {
   header("Location: index.php");
 }
 ?>
@@ -13,29 +13,27 @@ if($_SESSION['userType'] == "admin" || $_SESSION['userType'] == 'student'){
   <div id="upload-form">
     <h2>Upload Form</h2>
     <?php
-      if(isset($_GET['error'])){
-        if($_GET['error'] == 'emptyFields'){
-          ?>
-          <div class="error">All fields are mandatory, except detail info and file upload. <span onclick="closeError()">&times;</span></div>
-          <?php
-        }
-        else if($_GET['error'] == 'emptySubmissionDate'){
-          ?>
-          <div class="error">Last submission date should be there. <span onclick="closeError()">&times;</span></div>
-          <?php
-        }
+    if (isset($_GET['error'])) {
+      if ($_GET['error'] == 'emptyFields') {
+    ?>
+        <div class="error">All fields are mandatory, except detail info and file upload. <span onclick="closeError()">&times;</span></div>
+      <?php
+      } else if ($_GET['error'] == 'emptySubmissionDate') {
+      ?>
+        <div class="error">Last submission date should be there. <span onclick="closeError()">&times;</span></div>
+      <?php
       }
-      else if(isset($_GET['success'])){
-        if($_GET['success'] == 'assignmentUpload'){
-          ?>
-          <div class="success">Assignment is successfully Posted <span onclick="closeSuccess()">&times;</span></div>
-          <?php
-        }else{
-          ?>
-          <div class="success">Lecture notes are successfully uploaded <span onclick="closeSuccess()">&times;</span></div>
-          <?php
-        }
+    } else if (isset($_GET['success'])) {
+      if ($_GET['success'] == 'assignmentUpload') {
+      ?>
+        <div class="success">Assignment is successfully Posted <span onclick="closeSuccess()">&times;</span></div>
+      <?php
+      } else {
+      ?>
+        <div class="success">Lecture notes are successfully uploaded <span onclick="closeSuccess()">&times;</span></div>
+    <?php
       }
+    }
     ?>
     <form action="./includes/upload.inc.php" id="notesUploadForm" method="POST" enctype="multipart/form-data">
 
@@ -101,7 +99,7 @@ if($_SESSION['userType'] == "admin" || $_SESSION['userType'] == 'student'){
 </main>
 
 <script>
-  window.addEventListener('load', function(){
+  window.addEventListener('load', function() {
     document.getElementById('sampleeditor').setAttribute('contenteditable', 'true');
   });
 
@@ -115,14 +113,18 @@ if($_SESSION['userType'] == "admin" || $_SESSION['userType'] == 'student'){
     document.execCommand('insertHTML', false, '<a href="' + url + '" target="_blank">' + sText + '</a>');
     document.getElementById('txtFormatUrl').value = '';
   }
-  function getSubjects(variable){
-    $(variable).on("change", function(){
-      var data = {"branch": $("#branch").val(), "semester": $("#semester").val()};
+
+  function getSubjects(variable) {
+    $(variable).on("change", function() {
+      var data = {
+        "branch": $("#branch").val(),
+        "semester": $("#semester").val()
+      };
       $.ajax({
         url: "./includes/getSubjects.inc.php",
         type: "POST",
         data: data,
-        success: function (response){
+        success: function(response) {
           $("#course").html(response);
         }
       })
@@ -130,10 +132,12 @@ if($_SESSION['userType'] == "admin" || $_SESSION['userType'] == 'student'){
   }
   getSubjects($("#branch"));
   getSubjects($("#semester"));
-  function closeError(){
+
+  function closeError() {
     $(".error").slideUp();
   }
-  function closeSuccess(){
+
+  function closeSuccess() {
     $(".success").slideUp();
   }
 </script>

@@ -27,20 +27,20 @@ require "./includes/header.inc.php";
 </main>
 
 <?php
-  # I've created mail function but it is not working. basically it returns true but mail is not going to provided mail account.
-  if(isset($_POST['submit'])){
-    $to = "130masoodalam@gmail.com";
-    $subject = $_POST['subject'];
-    $userEmail = "From: " . $_POST['userEmail'] . "\r\n";
-    $message = $_POST['message'];
-    $userName = $_POST['userName'];
+# I've created mail function but it is not working. basically it returns true but mail is not going to provided mail account.
+if (isset($_POST['submit'])) {
+  $to = "130masoodalam@gmail.com";
+  $subject = $_POST['subject'];
+  $userEmail = "From: " . $_POST['userEmail'] . "\r\n";
+  $message = $_POST['message'];
+  $userName = $_POST['userName'];
 
-    if(mail($to, $subject, $message, $userEmail)){
-      header("Location: ./contact.php?o=messageSent");
-    } else {
-      header("Location: ./contact.php?o=error");
-    }
+  if (mail($to, $subject, $message, $userEmail)) {
+    header("Location: ./contact.php?o=messageSent");
+  } else {
+    header("Location: ./contact.php?o=error");
   }
+}
 
 require "./includes/footer.inc.php";
 ?>

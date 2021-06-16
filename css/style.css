@@ -16,22 +16,32 @@ body {
   font-weight: 300;
 }
 
-input, textarea, select, option {
+input,
+textarea,
+select,
+option {
   font-weight: 300;
 }
 
-input:focus, textarea:focus, select:focus, option:focus {
+input:focus,
+textarea:focus,
+select:focus,
+option:focus {
   outline: none;
 }
 
-button, input[type='button'], input[type='submit'] {
+button,
+input[type="button"],
+input[type="submit"] {
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
 }
 
-button:active, input[type='button']:active, input[type='submit']:active {
+button:active,
+input[type="button"]:active,
+input[type="submit"]:active {
   -webkit-box-shadow: 0 0 0.25em white !important;
           box-shadow: 0 0 0.25em white !important;
 }
@@ -65,7 +75,7 @@ nav {
   right: 1.25em;
   left: 1.25em;
   text-align: center;
-  border-radius: 0.250em;
+  border-radius: 0.25em;
   z-index: 999;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -90,7 +100,7 @@ nav .login-cta {
 }
 
 nav .login-cta:hover {
-  color: #43C12B;
+  color: #43c12b;
 }
 
 nav .login-cta .open {
@@ -101,7 +111,7 @@ nav .login-cta .open {
 nav .login-option {
   display: none;
   background-color: #126590;
-  border-radius: 0 0 .25em .25em;
+  border-radius: 0 0 0.25em 0.25em;
 }
 
 nav .login-option li:last-child {
@@ -129,7 +139,7 @@ nav .login-option li:last-child {
 }
 
 .container a span {
-  color: #6EC72D;
+  color: #6ec72d;
 }
 
 .container .hamburger {
@@ -139,7 +149,7 @@ nav .login-option li:last-child {
 .container .hamburger span {
   margin: 0 0;
   display: block;
-  height: 0.150em;
+  height: 0.15em;
   width: 1.5em;
   background-color: black;
   -webkit-transform-origin: 5px 2px;
@@ -240,7 +250,7 @@ nav .login-option li:last-child {
   padding: 0.5rem 1rem;
   border-radius: 0.5rem 0.5rem 0 0;
   font-weight: 400;
-  color: #8D3DAF;
+  color: #8d3daf;
 }
 
 .homepage .assignment .topbar span {
@@ -254,14 +264,16 @@ nav .login-option li:last-child {
   border-radius: 0 0 0.5rem 0.5rem;
 }
 
-.homepage .assignment .details .fileupload, .homepage .assignment .details .add-file {
+.homepage .assignment .details .fileupload,
+.homepage .assignment .details .add-file {
   margin: 0.125rem 0;
-  padding: 0.250rem 0.5rem;
+  padding: 0.25rem 0.5rem;
   background-color: #fff;
   border-radius: 0.5rem;
 }
 
-.homepage .assignment .details .fileupload span, .homepage .assignment .details .add-file span {
+.homepage .assignment .details .fileupload span,
+.homepage .assignment .details .add-file span {
   cursor: pointer;
   float: right;
   background-color: grey;
@@ -287,7 +299,7 @@ nav .login-option li:last-child {
   border: 1px solid #fff;
   border-radius: 0.5rem;
   width: 100%;
-  background-color: #6EC72D;
+  background-color: #6ec72d;
 }
 
 .homepage .lecture-notes {
@@ -304,7 +316,7 @@ nav .login-option li:last-child {
   padding: 0.5rem 1rem;
   border-radius: 0.5rem 0.5rem 0 0;
   font-weight: 400;
-  color: #8D3DAF;
+  color: #8d3daf;
 }
 
 .homepage .lecture-notes .topbar span {
@@ -320,7 +332,7 @@ nav .login-option li:last-child {
 
 .homepage .lecture-notes .details .attachement {
   margin: 0.125rem 0;
-  padding: 0.250rem 0.5rem;
+  padding: 0.25rem 0.5rem;
   background-color: #fff;
   border-radius: 0.5rem;
 }
@@ -361,9 +373,9 @@ nav .login-option li:last-child {
   font-family: poppins;
 }
 
-.homepage .search-student form input[type='submit'] {
+.homepage .search-student form input[type="submit"] {
   cursor: pointer;
-  background-color: #6EC72D;
+  background-color: #6ec72d;
   border: 1px solid #fff;
 }
 
@@ -381,7 +393,7 @@ nav .login-option li:last-child {
   background-color: #555555;
   color: #fff;
   width: calc(100% - 2rem);
-  border-radius: 0.250rem;
+  border-radius: 0.25rem;
 }
 
 .uploader .form-instruction .result-input #close {
@@ -401,13 +413,14 @@ nav .login-option li:last-child {
   padding: 0.5rem;
 }
 
-.uploader .form-instruction .result-input th, .uploader .form-instruction .result-input td {
+.uploader .form-instruction .result-input th,
+.uploader .form-instruction .result-input td {
   text-align: left;
   padding: 0.25rem;
 }
 
 .uploader .form-instruction .result-input th {
-  color: #6EC72D;
+  color: #6ec72d;
 }
 
 .uploader .form-instruction .result-input td:first-child {
@@ -442,20 +455,27 @@ nav .login-option li:last-child {
   text-align: center;
 }
 
-.uploader .form label, .uploader .form input, .uploader .form select, .uploader .form textarea {
+.uploader .form label,
+.uploader .form input,
+.uploader .form select,
+.uploader .form textarea {
   width: 100%;
   padding: 0.25rem;
   font-family: poppins;
-  border-radius: 0.250rem;
+  border-radius: 0.25rem;
   outline: none;
 }
 
-.uploader .form input, .uploader .form select, .uploader .form textarea {
+.uploader .form input,
+.uploader .form select,
+.uploader .form textarea {
   border: 1px solid #555555;
   margin-bottom: 0.5rem;
 }
 
-.uploader .form input:focus, .uploader .form select:focus, .uploader .form textarea:focus {
+.uploader .form input:focus,
+.uploader .form select:focus,
+.uploader .form textarea:focus {
   -webkit-box-shadow: 0px 0px 5px 0px #555555;
           box-shadow: 0px 0px 5px 0px #555555;
 }
@@ -465,7 +485,7 @@ nav .login-option li:last-child {
 }
 
 .uploader .form input[type="submit"] {
-  background-color: #6EC72D;
+  background-color: #6ec72d;
   color: #fff;
   border: 1px solid #555555;
   cursor: pointer;
@@ -497,7 +517,9 @@ nav .login-option li:last-child {
   background-color: #dd0404;
 }
 
-#schedule #schedule-result table, #schedule #schedule-result td, #schedule #schedule-result th {
+#schedule #schedule-result table,
+#schedule #schedule-result td,
+#schedule #schedule-result th {
   border: 1px solid black;
   border-collapse: collapse;
 }
@@ -507,15 +529,18 @@ nav .login-option li:last-child {
   color: #fff;
 }
 
-#schedule #schedule-result td, #schedule #schedule-result th {
+#schedule #schedule-result td,
+#schedule #schedule-result th {
   padding: 0.5rem;
 }
 
-#schedule #schedule-result td:first-child, #schedule #schedule-result th:first-child {
+#schedule #schedule-result td:first-child,
+#schedule #schedule-result th:first-child {
   font-weight: 400;
 }
 
-#schedule #schedule-result td:not(:first-child), #schedule #schedule-result th:not(:first-child) {
+#schedule #schedule-result td:not(:first-child),
+#schedule #schedule-result th:not(:first-child) {
   min-width: 6rem;
   text-align: center;
 }
@@ -531,12 +556,12 @@ nav .login-option li:last-child {
   list-style-type: none;
   text-align: justify;
   color: #555555;
-  border-top: 4px solid #6EC72D;
-  border-bottom: 4px solid #6EC72D;
+  border-top: 4px solid #6ec72d;
+  border-bottom: 4px solid #6ec72d;
 }
 
 #schedule .schedule-instruction li::before {
-  content: '#';
+  content: "#";
   color: #3791bb;
   margin-right: 0.5rem;
 }
@@ -555,20 +580,27 @@ nav .login-option li:last-child {
   text-align: center;
 }
 
-#schedule .form label, #schedule .form input, #schedule .form select, #schedule .form textarea {
+#schedule .form label,
+#schedule .form input,
+#schedule .form select,
+#schedule .form textarea {
   width: 100%;
   padding: 0.25rem;
   font-family: poppins;
-  border-radius: 0.250rem;
+  border-radius: 0.25rem;
   outline: none;
 }
 
-#schedule .form input, #schedule .form select, #schedule .form textarea {
+#schedule .form input,
+#schedule .form select,
+#schedule .form textarea {
   border: 1px solid #555555;
   margin-bottom: 0.5rem;
 }
 
-#schedule .form input:focus, #schedule .form select:focus, #schedule .form textarea:focus {
+#schedule .form input:focus,
+#schedule .form select:focus,
+#schedule .form textarea:focus {
   -webkit-box-shadow: 0px 0px 5px 0px #555555;
           box-shadow: 0px 0px 5px 0px #555555;
 }
@@ -578,14 +610,14 @@ nav .login-option li:last-child {
 }
 
 #schedule .form input[type="submit"] {
-  background-color: #6EC72D;
+  background-color: #6ec72d;
   color: #fff;
   border: 1px solid #555555;
   cursor: pointer;
 }
 
 #schedule #getSubjects {
-  background-color: #6EC72D;
+  background-color: #6ec72d;
   color: #fff;
   border: 1px solid #555555;
   cursor: pointer;
@@ -608,7 +640,8 @@ nav .login-option li:last-child {
   margin: 0rem 1rem;
 }
 
-#contact form input, #contact form textarea {
+#contact form input,
+#contact form textarea {
   margin-bottom: 0.5rem;
   border: 1px solid rgba(85, 85, 85, 0.6);
   border-radius: 0.5rem;
@@ -618,10 +651,11 @@ nav .login-option li:last-child {
           box-sizing: border-box;
   -webkit-box-shadow: 4px 4px 0px 0px rgba(85, 85, 85, 0.6);
           box-shadow: 4px 4px 0px 0px rgba(85, 85, 85, 0.6);
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-#contact form input:focus, #contact form textarea:focus {
+#contact form input:focus,
+#contact form textarea:focus {
   outline: none;
 }
 
@@ -629,9 +663,9 @@ nav .login-option li:last-child {
   resize: none;
 }
 
-#contact form input[type='submit'] {
+#contact form input[type="submit"] {
   width: 10rem;
-  background-color: #43C12B;
+  background-color: #43c12b;
   color: #fff;
   font-size: 1rem;
   cursor: pointer;
@@ -658,7 +692,7 @@ nav .login-option li:last-child {
 }
 
 #contact .contact-links div.links span {
-  color: #8D3DAF;
+  color: #8d3daf;
   font-weight: 400;
 }
 
@@ -708,8 +742,8 @@ nav .login-option li:last-child {
   right: 50%;
   -webkit-transform: translateX(50%);
           transform: translateX(50%);
-  background-color: #43C12B;
-  color: #4C3AE3;
+  background-color: #43c12b;
+  color: #4c3ae3;
 }
 
 #login > div form {
@@ -724,7 +758,7 @@ nav .login-option li:last-child {
   margin-top: 4rem;
   padding: 2rem;
   padding-top: 4rem;
-  background: linear-gradient(127deg, #00BC40, #4C3AE3);
+  background: linear-gradient(127deg, #00bc40, #4c3ae3);
   border-radius: 0.5rem;
 }
 
@@ -735,7 +769,7 @@ nav .login-option li:last-child {
 
 #login > div form .instruction ::before {
   content: "# ";
-  color: #242B2E;
+  color: #242b2e;
 }
 
 #login > div form .instruction li {
@@ -743,12 +777,13 @@ nav .login-option li:last-child {
   border-bottom: 2px solid rgba(255, 255, 255, 0.6);
 }
 
-#login > div form label, #login > div form input {
+#login > div form label,
+#login > div form input {
   width: 100%;
   padding: 0.4rem;
   margin-bottom: 0.3rem;
   border-radius: 0.25rem;
-  font-family: Montserrat, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: Montserrat, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 #login > div form input {
@@ -756,7 +791,7 @@ nav .login-option li:last-child {
 }
 
 #login > div form input[type="submit"] {
-  background-color: #43C12B;
+  background-color: #43c12b;
   color: #fff;
   margin-top: 2rem;
   width: 8rem;
@@ -785,12 +820,13 @@ nav .login-option li:last-child {
   background-color: rgba(85, 85, 85, 0.5);
   padding: 0.5rem 1rem;
   margin: 0.5rem;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   position: relative;
   overflow: auto;
 }
 
-#home .card ol, #home .card ul {
+#home .card ol,
+#home .card ul {
   list-style-position: inside;
 }
 
@@ -801,7 +837,7 @@ nav .login-option li:last-child {
 
 #home .card-head {
   position: relative;
-  background-color: #1C8D73;
+  background-color: #1c8d73;
   height: 2.5rem;
   margin: 0rem -0.5rem;
   border-radius: 0.5rem;
@@ -834,7 +870,7 @@ nav .login-option li:last-child {
   padding: 0.25rem;
   background-color: #70cece;
   text-decoration: none;
-  color: #242B2E;
+  color: #242b2e;
 }
 
 #home .card .read-more {
@@ -897,7 +933,7 @@ nav .login-option li:last-child {
   border: 1px solid rgba(85, 85, 85, 0.6);
   border-radius: 4px;
   background-color: #f3f3f3;
-  color: #1C8D73;
+  color: #1c8d73;
   font-weight: 400;
   padding-left: 0.75rem;
   margin-top: 0.25rem;
@@ -920,7 +956,7 @@ nav .login-option li:last-child {
   display: none;
   -ms-grid-columns: 3fr 9fr;
       grid-template-columns: 3fr 9fr;
-  background-color: #1C8D73;
+  background-color: #1c8d73;
   border-radius: 0.5rem;
   padding: 1rem 0rem;
   -webkit-box-align: center;
@@ -940,7 +976,7 @@ nav .login-option li:last-child {
 }
 
 #schedule-section #time-table .period .subject-name {
-  color: #23C4ED;
+  color: #23c4ed;
   font-size: 1rem;
   font-weight: 400;
 }
@@ -950,7 +986,7 @@ nav .login-option li:last-child {
 }
 
 #schedule-section #time-table .holiday {
-  background: #1C8D73;
+  background: #1c8d73;
   padding: 1rem;
   text-align: center;
   font-size: 2rem;
@@ -970,7 +1006,7 @@ nav .login-option li:last-child {
   -webkit-transform: translateY(50%);
           transform: translateY(50%);
   font-weight: 400;
-  background-color: #1C8D73;
+  background-color: #1c8d73;
   color: white;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -1004,7 +1040,8 @@ footer {
           user-select: none;
 }
 
-footer a, footer p {
+footer a,
+footer p {
   text-decoration: none;
   color: #fff;
 }
@@ -1018,7 +1055,7 @@ footer .fa-twitter {
 }
 
 footer .fa-instagram {
-  color: #8D3DAF;
+  color: #8d3daf;
 }
 
 footer .fa-facebook {
@@ -1097,20 +1134,27 @@ footer .fa-facebook {
           box-sizing: border-box;
 }
 
-#upload #upload-form form label, #upload #upload-form form input, #upload #upload-form form select, #upload #upload-form form textarea {
+#upload #upload-form form label,
+#upload #upload-form form input,
+#upload #upload-form form select,
+#upload #upload-form form textarea {
   width: 100%;
   padding: 0.25rem;
   font-family: poppins;
-  border-radius: 0.250rem;
+  border-radius: 0.25rem;
   outline: none;
 }
 
-#upload #upload-form form input, #upload #upload-form form select, #upload #upload-form form textarea {
+#upload #upload-form form input,
+#upload #upload-form form select,
+#upload #upload-form form textarea {
   border: 1px solid #555555;
   margin-bottom: 0.5rem;
 }
 
-#upload #upload-form form input:focus, #upload #upload-form form select:focus, #upload #upload-form form textarea:focus {
+#upload #upload-form form input:focus,
+#upload #upload-form form select:focus,
+#upload #upload-form form textarea:focus {
   -webkit-box-shadow: 0px 0px 5px 0px #555555;
           box-shadow: 0px 0px 5px 0px #555555;
 }
@@ -1120,7 +1164,7 @@ footer .fa-facebook {
 }
 
 #upload #upload-form form input[type="submit"] {
-  background-color: #6EC72D;
+  background-color: #6ec72d;
   color: #fff;
   border: 1px solid #555555;
   cursor: pointer;
@@ -1180,23 +1224,27 @@ footer .fa-facebook {
   min-width: -webkit-max-content;
   min-width: -moz-max-content;
   min-width: max-content;
-  border-bottom: 2px solid #43C12B;
+  border-bottom: 2px solid #43c12b;
 }
 
-#search label, #search input, #search select {
+#search label,
+#search input,
+#search select {
   width: 100%;
   padding: 0.25rem 0.5rem;
   font-family: poppins;
-  border-radius: 0.250rem;
+  border-radius: 0.25rem;
   outline: none;
 }
 
-#search input, #search select {
+#search input,
+#search select {
   border: 1px solid #555555;
   margin-bottom: 0.5rem;
 }
 
-#search input:focus, #search select:focus {
+#search input:focus,
+#search select:focus {
   -webkit-box-shadow: 0px 0px 5px 0px #555555;
           box-shadow: 0px 0px 5px 0px #555555;
 }
@@ -1249,7 +1297,7 @@ footer .fa-facebook {
     margin-left: 1rem;
   }
   .container nav .primary-nav li:hover {
-    color: #6EC72D;
+    color: #6ec72d;
   }
   .container nav .primary-nav li:hover::after {
     opacity: 1;
@@ -1257,7 +1305,7 @@ footer .fa-facebook {
   }
   .container nav .primary-nav li::after {
     content: "";
-    background: #43C12B;
+    background: #43c12b;
     width: 100%;
     height: 0rem;
     position: absolute;
@@ -1310,7 +1358,8 @@ footer .fa-facebook {
     padding: 0 3rem;
     width: 70rem;
   }
-  #schedule #schedule-result h2, #schedule #schedule-result h3 {
+  #schedule #schedule-result h2,
+  #schedule #schedule-result h3 {
     text-align: center;
   }
   #schedule #schedule-result table {
@@ -1376,7 +1425,8 @@ footer .fa-facebook {
     display: grid;
     place-content: center;
   }
-  #schedule .upload-for label, #schedule .upload-for select {
+  #schedule .upload-for label,
+  #schedule .upload-for select {
     width: 480px;
   }
   #schedule .upload-for .even-odd {
@@ -1398,7 +1448,10 @@ footer .fa-facebook {
     margin-left: 1rem;
     text-align: left;
   }
-  #profile, #upload, #search, #home {
+  #profile,
+  #upload,
+  #search,
+  #home {
     margin: 2rem;
     display: -ms-grid;
     display: grid;
@@ -1437,7 +1490,10 @@ footer .fa-facebook {
   .uploader {
     margin: 1rem 10rem;
   }
-  #profile, #upload, #search, #home {
+  #profile,
+  #upload,
+  #search,
+  #home {
     margin: 2rem;
     display: -ms-grid;
     display: grid;
@@ -1480,7 +1536,9 @@ footer .fa-facebook {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  #login #student-login, #login #professor-login, #login #admin-login {
+  #login #student-login,
+  #login #professor-login,
+  #login #admin-login {
     width: 500px;
   }
 }

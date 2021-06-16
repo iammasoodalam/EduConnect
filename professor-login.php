@@ -4,7 +4,7 @@ require_once "./includes/header.inc.php";
 <main id="login">
   <div id="professor-login">
     <form action="includes/professor-login.inc.php" id="professor-login-form" method="POST">
-    <div class="heading">Professor Login</div>
+      <div class="heading">Professor Login</div>
       <ul class="instruction">
         <li>Use your Emplyee number provided by the Administration, like (243234).</li>
         <li>If you are never reset your password then your password is the same as provided by the Administrator.</li>
@@ -18,7 +18,7 @@ require_once "./includes/header.inc.php";
       <input type="submit" value="Login">
     </form>
   </div>
-  
+
 </main>
 
 

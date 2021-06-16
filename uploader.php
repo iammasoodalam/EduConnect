@@ -1,6 +1,6 @@
-<?php 
+<?php
 include "./includes/header.inc.php";
-if($_SESSION['userType'] != 'admin'){
+if ($_SESSION['userType'] != 'admin') {
   header("Location: ./home.php");
 }
 ?>
@@ -8,7 +8,7 @@ if($_SESSION['userType'] != 'admin'){
 <main class="uploader active" id="student">
   <div class="form-instruction">
     <div class="result-input" id="resultStudent" style="display: none;">
-    <!-- Output of new Student will appear here -->
+      <!-- Output of new Student will appear here -->
     </div>
     <h2>Instruction for Students form</h2>
     <ul class="instruction-list">
@@ -88,7 +88,7 @@ if($_SESSION['userType'] != 'admin'){
   </div>
   <div class="form">
     <h2>Professor form</h2>
-    <form action="includes/newProfessor.php" method="POST" class="professorForm" >
+    <form action="includes/newProfessor.php" method="POST" class="professorForm">
       <label for="professorId">Professor ID</label>
       <input type="text" name="professorId" id="professorId">
       <label for="professorName">Professor's name</label>
@@ -111,7 +111,7 @@ if($_SESSION['userType'] != 'admin'){
 </main>
 <main id="schedule" class="" style="display: none;">
   <div id="schedule-result" style="display: none;">
-    
+
   </div>
   <h2 id="schedule-heading">Schedule uploader for student</h2>
   <ul class="schedule-instruction">
