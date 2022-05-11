@@ -110,7 +110,7 @@ if ($_SESSION['userType'] == "admin" || $_SESSION['userType'] == 'student') {
   function setUrl() {
     var url = document.getElementById('txtFormatUrl').value;
     var sText = document.getSelection();
-    document.execCommand('insertHTML', false, '<a href="' + url + '" target="_blank">' + sText + '</a>');
+    document.execCommand('insertHTML', false, `<a href="${url}" target="_blank">${sText}</a>`);
     document.getElementById('txtFormatUrl').value = '';
   }
 

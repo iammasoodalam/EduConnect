@@ -1,12 +1,13 @@
 <?php
 require_once "./includes/header.inc.php";
 require_once "./includes/connection.inc.php";
+define('URL', $_SERVER['PHP_SELF']);
 if (empty($_SESSION)) {
   header("Location: index.php");
   exit();
 }
 if ($_SESSION['userType'] == "admin") {
-  header("Location: uploader.php");
+  header("Location:" . URL . "/uploader.php");
 }
 ?>
 

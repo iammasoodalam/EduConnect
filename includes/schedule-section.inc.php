@@ -2,7 +2,7 @@
   <h2 class="heading">Today's Schedule</h2>
   <div id="time-table">
     <button id="previous" onclick="plusSlides(-1)">
-      << /button>
+      <</button>
         <button id="next" onclick="plusSlides(1)">></button>
         <?php
         $day = date('w');

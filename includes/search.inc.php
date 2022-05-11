@@ -44,7 +44,7 @@ if (isset($_GET['searchBy'])) {
 } else {
   $sql = "SELECT p.name, p.emailId, pp.phone FROM professor p 
   INNER JOIN professorphone pp USING(professorId) 
-  WHERE p.name LIKE ?";
+  WHERE p.name LIKE ? ORDER BY p.name";
 
   $stmt = $mysqli->prepare($sql);
   $stmt->bind_param("s", $searchInput);
